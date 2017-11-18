@@ -13,10 +13,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        setLoadingVC()
+        
         return true
+    }
+    
+    func setLoadingVC() {
+        let vc = LoadingViewController.storyboardInstance
+        window?.rootViewController = vc
+    }
+    
+    func setMainVC() {
+        let vc = MainNavigationController.storyboardInstance
+        window?.rootViewController = vc
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
