@@ -10,10 +10,18 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var closeButton: UIButton!
+    
+    var complexity: gameComplexity!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        closeButton.addTarget(self, action: #selector(self.close), for: .touchUpInside)
+    }
+    
+    @objc func close() {
+        self.navigationController?.popViewController(animated: true)
     }
 
     deinit {

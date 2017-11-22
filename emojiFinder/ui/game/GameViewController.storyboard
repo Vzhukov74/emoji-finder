@@ -17,9 +17,22 @@
                     <view key="view" contentMode="scaleToFill" id="NZe-RH-73J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXZ-2E-T4A">
+                                <rect key="frame" x="16" y="36" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EXZ-2E-T4A" firstAttribute="top" secondItem="Bg6-Ae-tQA" secondAttribute="top" constant="16" id="Fux-Vn-Zet"/>
+                            <constraint firstItem="EXZ-2E-T4A" firstAttribute="leading" secondItem="Bg6-Ae-tQA" secondAttribute="leading" constant="16" id="K9F-ag-w6A"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bg6-Ae-tQA"/>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="EXZ-2E-T4A" id="94S-9S-fY0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7Q-vI-Y3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,12 +8,39 @@
 
 import UIKit
 
+enum gameComplexity {
+    case easy
+    case medium
+    case hard
+}
+
 class MenuViewController: UIViewController {
 
+    @IBAction func menuButtonAction(_ sender: UIButton) {
+        switch sender.tag {
+        case 0: self.showGameVC(complexity: .easy)
+        case 1: self.showGameVC(complexity: .medium)
+        case 2: self.showGameVC(complexity: .medium)
+        case 3: self.showResultsVC()
+        default: break
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    fileprivate func showGameVC(complexity: gameComplexity) {
+        if let vc = GameViewController.storyboardInstance {
+            vc.complexity = complexity
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    fileprivate func showResultsVC() {
+        
     }
 
     deinit {
