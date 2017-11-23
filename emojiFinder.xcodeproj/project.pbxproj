@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F52282171FC5873900DB1C1C /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52282151FC5873900DB1C1C /* GameCell.swift */; };
 		F52282181FC5873A00DB1C1C /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52282161FC5873900DB1C1C /* GameCell.xib */; };
+		F522822D1FC7065600DB1C1C /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522822C1FC7065600DB1C1C /* GameEngine.swift */; };
 		F5899EC51FBF17E600728630 /* StoryboardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5899EC41FBF17E600728630 /* StoryboardList.swift */; };
 		F5899EC71FBF188B00728630 /* StatisticsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5899EC61FBF188B00728630 /* StatisticsViewController.storyboard */; };
 		F5899EC91FBF18A000728630 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5899EC81FBF18A000728630 /* StatisticsViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		F52282151FC5873900DB1C1C /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		F52282161FC5873900DB1C1C /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
+		F522822C1FC7065600DB1C1C /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		F5899EC41FBF17E600728630 /* StoryboardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardList.swift; sourceTree = "<group>"; };
 		F5899EC61FBF188B00728630 /* StatisticsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticsViewController.storyboard; sourceTree = "<group>"; };
 		F5899EC81FBF18A000728630 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				F52282141FC586FF00DB1C1C /* cells */,
 				F5899ECC1FBF18CA00728630 /* GameViewController.swift */,
 				F5899ED91FBF198900728630 /* GameViewController.storyboard */,
+				F522822C1FC7065600DB1C1C /* GameEngine.swift */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				F52282171FC5873900DB1C1C /* GameCell.swift in Sources */,
 				F5899ED41FBF195C00728630 /* MainNavigationController.swift in Sources */,
 				F5899EC51FBF17E600728630 /* StoryboardList.swift in Sources */,
+				F522822D1FC7065600DB1C1C /* GameEngine.swift in Sources */,
 				F5899ED11FBF192A00728630 /* MenuViewController.swift in Sources */,
 				F5B8AD3B1FBDD4A6007326E4 /* AppDelegate.swift in Sources */,
 				F5899ECB1FBF18B800728630 /* WinViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum gameComplexity {
+enum GameComplexity {
     case easy
     case medium
     case hard
@@ -32,7 +32,7 @@ class MenuViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    fileprivate func showGameVC(complexity: gameComplexity) {
+    fileprivate func showGameVC(complexity: GameComplexity) {
         if let vc = GameViewController.storyboardInstance {
             vc.complexity = complexity
             self.navigationController?.pushViewController(vc, animated: true)
