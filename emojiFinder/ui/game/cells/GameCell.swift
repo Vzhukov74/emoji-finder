@@ -8,16 +8,22 @@
 
 import UIKit
 
-let emoji = ["👻", "🤡", "👾", "🤖", "😈", "🎃", "👽", "😻", "👍", "👩‍💻", "👨🏻‍💻", "🧙‍♂️", "🧟‍♀️", "👑", "🐼", "🙈", "🙉", "🙊", "🐷", "🐔", "🐙", "🦖", "🐍", "🍄", "⛄️", "☂️", "🍳", "🎱", "🎲", "💣"]
-
 class GameCell: UICollectionViewCell, CellRegistable, CellDequeueReusable {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var info: UILabel!
+    @IBOutlet weak var temHideView: UIView! {
+        didSet {
+            temHideView.isHidden = false
+        }
     }
-
-    var id = ""
+    
+    fileprivate var isUnhide = false
+    
+    var id = "" {
+        didSet {
+            info.text = id
+        }
+    }
 }
 
 extension GameCell: GameCellAdp {
@@ -26,10 +32,18 @@ extension GameCell: GameCellAdp {
     }
     
     func hideLogo() {
-        
+        if !isUnhide {
+            temHideView.isHidden = false
+        }
     }
+    
+    func unhideLogo() {
+        temHideView.isHidden = true
+    }
+    
     func setAsOpen() {
-        
+        isUnhide = true
+        temHideView.isHidden = true
     }
 }
 

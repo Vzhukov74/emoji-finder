@@ -26,6 +26,8 @@
 		F5B8AD3B1FBDD4A6007326E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8AD3A1FBDD4A6007326E4 /* AppDelegate.swift */; };
 		F5B8AD421FBDD4A6007326E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B8AD411FBDD4A6007326E4 /* Assets.xcassets */; };
 		F5B8AD451FBDD4A6007326E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B8AD431FBDD4A6007326E4 /* LaunchScreen.storyboard */; };
+		F5C03E6B1FD6D85C0006484F /* SoundEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C03E6A1FD6D85C0006484F /* SoundEngine.swift */; };
+		F5C03E6D1FD6D9B90006484F /* coincidence.wav in Resources */ = {isa = PBXBuildFile; fileRef = F5C03E6C1FD6D9B80006484F /* coincidence.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		F5B8AD411FBDD4A6007326E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5B8AD441FBDD4A6007326E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5B8AD461FBDD4A6007326E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C03E6A1FD6D85C0006484F /* SoundEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEngine.swift; sourceTree = "<group>"; };
+		F5C03E6C1FD6D9B80006484F /* coincidence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coincidence.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,13 +165,23 @@
 		F5B8AD391FBDD4A6007326E4 /* emojiFinder */ = {
 			isa = PBXGroup;
 			children = (
+				F5C03E691FD6D83D0006484F /* models */,
 				F5899EBE1FBF176800728630 /* ui */,
 				F5B8AD3A1FBDD4A6007326E4 /* AppDelegate.swift */,
+				F5C03E6C1FD6D9B80006484F /* coincidence.wav */,
 				F5B8AD411FBDD4A6007326E4 /* Assets.xcassets */,
 				F5B8AD431FBDD4A6007326E4 /* LaunchScreen.storyboard */,
 				F5B8AD461FBDD4A6007326E4 /* Info.plist */,
 			);
 			path = emojiFinder;
+			sourceTree = "<group>";
+		};
+		F5C03E691FD6D83D0006484F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F5C03E6A1FD6D85C0006484F /* SoundEngine.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C03E6D1FD6D9B90006484F /* coincidence.wav in Resources */,
 				F5899EDE1FBF19A800728630 /* MenuViewController.storyboard in Resources */,
 				F5899EC71FBF188B00728630 /* StatisticsViewController.storyboard in Resources */,
 				F5899ED81FBF197C00728630 /* WinViewController.storyboard in Resources */,
@@ -254,6 +269,7 @@
 				F5899ED41FBF195C00728630 /* MainNavigationController.swift in Sources */,
 				F5899EC51FBF17E600728630 /* StoryboardList.swift in Sources */,
 				F522822D1FC7065600DB1C1C /* GameEngine.swift in Sources */,
+				F5C03E6B1FD6D85C0006484F /* SoundEngine.swift in Sources */,
 				F5899ED11FBF192A00728630 /* MenuViewController.swift in Sources */,
 				F5B8AD3B1FBDD4A6007326E4 /* AppDelegate.swift in Sources */,
 				F5899ECB1FBF18B800728630 /* WinViewController.swift in Sources */,

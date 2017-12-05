@@ -18,9 +18,35 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VI-x6-93X">
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-lX-0Pf">
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
             </view>
             <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7VI-x6-93X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9KM-vU-S9G"/>
+                <constraint firstItem="7VI-x6-93X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KP4-Ad-CLJ"/>
+                <constraint firstAttribute="trailing" secondItem="ldi-lX-0Pf" secondAttribute="trailing" id="Vzx-dQ-j3b"/>
+                <constraint firstItem="ldi-lX-0Pf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YLd-iG-EQZ"/>
+                <constraint firstAttribute="bottom" secondItem="ldi-lX-0Pf" secondAttribute="bottom" id="ia5-rI-moC"/>
+                <constraint firstAttribute="trailing" secondItem="7VI-x6-93X" secondAttribute="trailing" id="kv3-zd-wsl"/>
+                <constraint firstAttribute="bottom" secondItem="7VI-x6-93X" secondAttribute="bottom" id="pQR-Zn-2QC"/>
+                <constraint firstItem="ldi-lX-0Pf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vOw-Dj-9T3"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="info" destination="7VI-x6-93X" id="luG-1x-DRu"/>
+                <outlet property="temHideView" destination="ldi-lX-0Pf" id="Kxt-xo-8fD"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

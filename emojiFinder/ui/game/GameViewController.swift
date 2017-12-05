@@ -46,13 +46,13 @@ class GameViewController: UIViewController {
 
 extension GameViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return controller.numberOfPairs
+        return controller.currentEmojiSet.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = GameCell.cell(collectionView: collectionView, indexPath: indexPath)
-        cell.id = ""
+        cell.id = controller.currentEmojiSet[indexPath.row]
         
         return cell
     }
