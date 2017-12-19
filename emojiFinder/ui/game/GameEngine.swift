@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-private struct PusedCells {
+private struct PushedCells {
     weak var cellOne: GameCellAdp?
     weak var cellTwo: GameCellAdp?
     
@@ -26,45 +26,55 @@ protocol GameCellAdp: class {
     func setAsOpen()
 }
 
+protocol GameTimer: class {
+    func start()
+    func stop() -> Int
+    func reset()
+}
+
 class GameEngine {
     
     let emoji = ["👻", "🤡", "👾", "🤖", "😈", "🎃", "👽", "😻", "👍", "👩‍💻", "👨🏻‍💻", "🧙‍♂️", "🧟‍♀️", "👑", "🐼", "🙈", "🙉", "🙊", "🐷", "🐔", "🐙", "🦖", "🐍", "🍄", "⛄️", "☂️", "🍳", "🎱", "🎲", "💣"]
     
     var cellSize = CGSize(width: 40, height: 40)
-    var numberOfPairs: Int = 0
     
     fileprivate let complexity: GameComplexity!
-    fileprivate var pusedCells = PusedCells()
+    fileprivate var pusedCells = PushedCells()
     
     fileprivate let soundEngine = SoundEngine()
     
     fileprivate var _numberOfPairs: Int = 0
+    fileprivate var numberOfGuessedPairs: Int = 0
     
     var currentEmojiSet = [String]()
+    
+    var numberOfMotion = 0
+    
+    weak var timerDelegate: GameTimer?
     
     init(complexity: GameComplexity) {
         self.complexity = complexity
         
+        numberOfMotion = 0
+        numberOfGuessedPairs = 0
+        
         switch complexity {
         case .easy:
-            numberOfPairs = 12
             _numberOfPairs = 12
         case .medium:
-            numberOfPairs = 16
             _numberOfPairs = 12
         case .hard:
-            numberOfPairs = 18
             _numberOfPairs = 12
         }
         
         calculateCellSize()
         
-        currentEmojiSet = getRandomSetOfEmojiFor(size: 24)
+        currentEmojiSet = getRandomSetOfEmojiFor(size: _numberOfPairs * 2)
     }
     
     fileprivate func calculateCellSize() {
         let screenWidth = UIScreen.main.bounds.width
-        let screenWidthWithoutInset = screenWidth - ( 5 * 10 )
+        let screenWidthWithoutInset = screenWidth - ( 5 * 10 ) - 8
         let cellWidth = Int(screenWidthWithoutInset / 4)
         
         if cellWidth > 60 {
@@ -93,6 +103,12 @@ class GameEngine {
                 cell.unhideLogo()
             }
         }
+        
+        numberOfMotion += 1
+        //if is it first motion
+        if numberOfMotion == 1 {
+            self.timerDelegate?.start()
+        }
     }
     
     fileprivate func resetCells() {
@@ -115,16 +131,17 @@ class GameEngine {
     }
     
     fileprivate func userGuessedPair() {
-        self.numberOfPairs -= 1
+        numberOfGuessedPairs += 1
         soundEngine.playCoincidenceSound()
         
-        if numberOfPairs == 0 {
+        if _numberOfPairs == numberOfGuessedPairs {
             self.userWon()
         }
     }
     
     fileprivate func userWon() {
-        
+        let time = self.timerDelegate?.stop()
+        print(time)
     }
 }
 

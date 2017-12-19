@@ -1,0 +1,26 @@
+
+disabled_rules:
+- line_length
+- colon
+- trailing_whitespace
+- force_cast
+- variable_name
+- type_name
+- control_statement
+- force_try
+- implicit_getter
+
+excluded:
+- Carthage
+- Pods
+
+included:
+- emojiFinder
+- emojiFinder/models
+- emojiFinder/ui/main
+- emojiFinder/ui/statistics
+- emojiFinder/ui/win
+- emojiFinder/game
+- emojiFinder/game/cells
+- emojiFinder/loading
+- emojiFinder/menu

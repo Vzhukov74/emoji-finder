@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		889C80349EDAEA2631A25E7E /* Pods_emojiFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2310B305F4D8DA55880CC51C /* Pods_emojiFinder.framework */; };
 		F52282171FC5873900DB1C1C /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52282151FC5873900DB1C1C /* GameCell.swift */; };
 		F52282181FC5873A00DB1C1C /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52282161FC5873900DB1C1C /* GameCell.xib */; };
 		F522822D1FC7065600DB1C1C /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522822C1FC7065600DB1C1C /* GameEngine.swift */; };
@@ -28,12 +29,16 @@
 		F5B8AD451FBDD4A6007326E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B8AD431FBDD4A6007326E4 /* LaunchScreen.storyboard */; };
 		F5C03E6B1FD6D85C0006484F /* SoundEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C03E6A1FD6D85C0006484F /* SoundEngine.swift */; };
 		F5C03E6D1FD6D9B90006484F /* coincidence.wav in Resources */ = {isa = PBXBuildFile; fileRef = F5C03E6C1FD6D9B80006484F /* coincidence.wav */; };
+		F5CF43411FDA9FA700038006 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F5CF43401FDA9FA700038006 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2310B305F4D8DA55880CC51C /* Pods_emojiFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emojiFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E7B74A5FF25C169E9D2D386 /* Pods-emojiFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emojiFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder.release.xcconfig"; sourceTree = "<group>"; };
 		F52282151FC5873900DB1C1C /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		F52282161FC5873900DB1C1C /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
 		F522822C1FC7065600DB1C1C /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		F586DA927DAB09A74EDCC36E /* Pods-emojiFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emojiFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		F5899EC41FBF17E600728630 /* StoryboardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardList.swift; sourceTree = "<group>"; };
 		F5899EC61FBF188B00728630 /* StatisticsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticsViewController.storyboard; sourceTree = "<group>"; };
 		F5899EC81FBF18A000728630 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		F5B8AD461FBDD4A6007326E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C03E6A1FD6D85C0006484F /* SoundEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEngine.swift; sourceTree = "<group>"; };
 		F5C03E6C1FD6D9B80006484F /* coincidence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coincidence.wav; sourceTree = "<group>"; };
+		F5CF43401FDA9FA700038006 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +67,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889C80349EDAEA2631A25E7E /* Pods_emojiFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC4244EDD3A21C234E562734 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F586DA927DAB09A74EDCC36E /* Pods-emojiFinder.debug.xcconfig */,
+				9E7B74A5FF25C169E9D2D386 /* Pods-emojiFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C93015AF84E28CBAF9022F14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2310B305F4D8DA55880CC51C /* Pods_emojiFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F52282141FC586FF00DB1C1C /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,8 +173,11 @@
 		F5B8AD2E1FBDD4A6007326E4 = {
 			isa = PBXGroup;
 			children = (
+				F5CF43401FDA9FA700038006 /* .swiftlint.yml */,
 				F5B8AD391FBDD4A6007326E4 /* emojiFinder */,
 				F5B8AD381FBDD4A6007326E4 /* Products */,
+				BC4244EDD3A21C234E562734 /* Pods */,
+				C93015AF84E28CBAF9022F14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5B8AD491FBDD4A6007326E4 /* Build configuration list for PBXNativeTarget "emojiFinder" */;
 			buildPhases = (
+				E5E1893A5234A790AE9AF901 /* [CP] Check Pods Manifest.lock */,
 				F5B8AD331FBDD4A6007326E4 /* Sources */,
 				F5B8AD341FBDD4A6007326E4 /* Frameworks */,
 				F5B8AD351FBDD4A6007326E4 /* Resources */,
+				15C2C73ACDD4A38864255E69 /* [CP] Embed Pods Frameworks */,
+				289280B450039801407E6C41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,10 +283,69 @@
 				F5899EDA1FBF198900728630 /* GameViewController.storyboard in Resources */,
 				F5B8AD421FBDD4A6007326E4 /* Assets.xcassets in Resources */,
 				F5899ED61FBF196A00728630 /* MainNavigationController.storyboard in Resources */,
+				F5CF43411FDA9FA700038006 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15C2C73ACDD4A38864255E69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		289280B450039801407E6C41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5E1893A5234A790AE9AF901 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-emojiFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5B8AD331FBDD4A6007326E4 /* Sources */ = {
@@ -339,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -390,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -400,9 +489,11 @@
 		};
 		F5B8AD4A1FBDD4A6007326E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F586DA927DAB09A74EDCC36E /* Pods-emojiFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J57LR5C228;
 				INFOPLIST_FILE = emojiFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = md.emojiFinder;
@@ -414,9 +505,11 @@
 		};
 		F5B8AD4B1FBDD4A6007326E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E7B74A5FF25C169E9D2D386 /* Pods-emojiFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J57LR5C228;
 				INFOPLIST_FILE = emojiFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = md.emojiFinder;
