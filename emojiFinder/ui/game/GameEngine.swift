@@ -36,7 +36,7 @@ class GameEngine {
     
     let emoji = ["👻", "🤡", "👾", "🤖", "😈", "🎃", "👽", "😻", "👍", "👩‍💻", "👨🏻‍💻", "🧙‍♂️", "🧟‍♀️", "👑", "🐼", "🙈", "🙉", "🙊", "🐷", "🐔", "🐙", "🦖", "🐍", "🍄", "⛄️", "☂️", "🍳", "🎱", "🎲", "💣"]
     
-    var cellSize = CGSize(width: 40, height: 40)
+    var cellSize = CGSize(width: 60, height: 60)
     
     fileprivate let complexity: GameComplexity!
     fileprivate var pusedCells = PushedCells()
@@ -60,35 +60,22 @@ class GameEngine {
         
         switch complexity {
         case .easy:
-            _numberOfPairs = 12
+            _numberOfPairs = 15
         case .medium:
-            _numberOfPairs = 12
+            _numberOfPairs = 20
         case .hard:
-            _numberOfPairs = 12
+            _numberOfPairs = 25
         }
-        
-        calculateCellSize()
         
         currentEmojiSet = getRandomSetOfEmojiFor(size: _numberOfPairs * 2)
-    }
-    
-    fileprivate func calculateCellSize() {
-        let screenWidth = UIScreen.main.bounds.width
-        let screenWidthWithoutInset = screenWidth - ( 5 * 10 ) - 8
-        let cellWidth = Int(screenWidthWithoutInset / 4)
-        
-        if cellWidth > 60 {
-            cellSize = CGSize(width: 60, height: 60)
-        } else {
-            cellSize = CGSize(width: cellWidth, height: cellWidth)
-        }
-        print("cell size is \(cellSize)")
     }
     
     func wasPushedCell(cell: GameCellAdp) {
         if pusedCells.cellOne == nil {
             pusedCells.cellOne = cell
             cell.unhideLogo()
+        } else if cell === pusedCells.cellOne {
+            return
         } else if pusedCells.cellTwo == nil {
             pusedCells.cellTwo = cell
             cell.unhideLogo()
@@ -153,7 +140,7 @@ extension GameEngine {
         let randomNumbers: NSMutableSet = []
         let halfSize = size / 2
         
-        for _ in 0...halfSize {
+        for _ in 0..<halfSize {
             var random: Int = 0
             repeat {
                 random = Int(arc4random_uniform((UInt32(emoji.count))))

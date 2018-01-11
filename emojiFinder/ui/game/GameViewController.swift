@@ -65,11 +65,11 @@ class GameViewController: UIViewController {
             let temp = elapsed.truncatingRemainder(dividingBy: 60 * 60)
             let min = temp / 60
             let sec = temp.truncatingRemainder(dividingBy: 60)
-            timeLabel.text = String(format: "%.0f:%.0f:%.0f", arguments: [hour.rounded(.down), min.rounded(.down), sec])
+            timeLabel.text = String(format: "%.0f:%.00f:%.00f", arguments: [hour.rounded(.down), min.rounded(.down), sec])
         } else if elapsed > 60 {
             let min = elapsed / 60
             let sec = elapsed.truncatingRemainder(dividingBy: 60)
-            timeLabel.text = String(format: "%.0f:%.0f", arguments: [min,sec])
+            timeLabel.text = String(format: "%.0f:%.00f", arguments: [min,sec])
         } else {
             timeLabel.text = String(format: "%.0f", arguments: [elapsed])
         }

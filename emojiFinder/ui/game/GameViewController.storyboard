@@ -30,13 +30,13 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-IH-Osy">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="8" y="76" width="359" height="591"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E3F-40-uXF">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="E3F-40-uXF">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
@@ -61,17 +61,17 @@
                             <constraint firstItem="Bg6-Ae-tQA" firstAttribute="trailing" secondItem="WBJ-XJ-dmZ" secondAttribute="trailing" id="4v2-aN-BbV"/>
                             <constraint firstItem="Bg6-Ae-tQA" firstAttribute="bottom" secondItem="WBJ-XJ-dmZ" secondAttribute="bottom" id="4ww-dJ-oS9"/>
                             <constraint firstItem="WBJ-XJ-dmZ" firstAttribute="leading" secondItem="Bg6-Ae-tQA" secondAttribute="leading" id="54v-aG-18S"/>
+                            <constraint firstItem="1Bf-IH-Osy" firstAttribute="leading" secondItem="Bg6-Ae-tQA" secondAttribute="leading" constant="8" id="8D9-Js-kRl"/>
                             <constraint firstItem="EXZ-2E-T4A" firstAttribute="top" secondItem="Bg6-Ae-tQA" secondAttribute="top" constant="16" id="Fux-Vn-Zet"/>
                             <constraint firstItem="Bg6-Ae-tQA" firstAttribute="trailing" secondItem="7N0-vk-hBe" secondAttribute="trailing" constant="16" id="ImI-oc-Vd7"/>
                             <constraint firstItem="Bg6-Ae-tQA" firstAttribute="bottom" secondItem="1Bf-IH-Osy" secondAttribute="bottom" id="Jok-X4-Nyl"/>
                             <constraint firstItem="EXZ-2E-T4A" firstAttribute="leading" secondItem="Bg6-Ae-tQA" secondAttribute="leading" constant="16" id="K9F-ag-w6A"/>
                             <constraint firstItem="7N0-vk-hBe" firstAttribute="leading" secondItem="TvK-t6-8Nv" secondAttribute="trailing" constant="10" id="Uap-Zu-b4M"/>
                             <constraint firstItem="TvK-t6-8Nv" firstAttribute="leading" secondItem="EXZ-2E-T4A" secondAttribute="trailing" constant="10" id="X8d-ff-vPU"/>
-                            <constraint firstItem="1Bf-IH-Osy" firstAttribute="leading" secondItem="Bg6-Ae-tQA" secondAttribute="leading" id="Y5M-fd-vly"/>
                             <constraint firstItem="WBJ-XJ-dmZ" firstAttribute="top" secondItem="NZe-RH-73J" secondAttribute="top" id="YAZ-1v-hXW"/>
-                            <constraint firstItem="1Bf-IH-Osy" firstAttribute="trailing" secondItem="Bg6-Ae-tQA" secondAttribute="trailing" id="hjA-G9-2xN"/>
                             <constraint firstItem="1Bf-IH-Osy" firstAttribute="top" secondItem="EXZ-2E-T4A" secondAttribute="bottom" constant="10" id="l9i-O1-HQD"/>
                             <constraint firstItem="7N0-vk-hBe" firstAttribute="top" secondItem="Bg6-Ae-tQA" secondAttribute="top" constant="16" id="nAP-4B-5b2"/>
+                            <constraint firstAttribute="trailing" secondItem="1Bf-IH-Osy" secondAttribute="trailing" constant="8" id="y40-3H-MK9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bg6-Ae-tQA"/>
                     </view>

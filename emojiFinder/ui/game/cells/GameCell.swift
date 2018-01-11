@@ -10,10 +10,15 @@ import UIKit
 
 class GameCell: UICollectionViewCell, CellRegistable, CellDequeueReusable {
 
-    @IBOutlet weak var info: UILabel!
+    @IBOutlet weak var info: UILabel! {
+        didSet {
+            info.isHidden = true 
+        }
+    }
     @IBOutlet weak var temHideView: UIView! {
         didSet {
-            temHideView.isHidden = false
+            temHideView.layer.cornerRadius = 4
+            temHideView.clipsToBounds = true
         }
     }
     
@@ -33,17 +38,17 @@ extension GameCell: GameCellAdp {
     
     func hideLogo() {
         if !isUnhide {
-            temHideView.isHidden = false
+            info.isHidden = true
         }
     }
     
     func unhideLogo() {
-        temHideView.isHidden = true
+        info.isHidden = false
     }
     
     func setAsOpen() {
         isUnhide = true
-        temHideView.isHidden = true
+        info.isHidden = false
     }
 }
 
