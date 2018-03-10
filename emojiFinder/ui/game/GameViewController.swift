@@ -36,7 +36,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    var complexity: GameComplexity!
+    var gameModel: GameEngine!
     
     fileprivate var controller: GameEngine!
     fileprivate var timer = Timer()
@@ -44,8 +44,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        controller = GameEngine(complexity: complexity)
-        controller.timerDelegate = self
+        gameModel.timerDelegate = self
         
         closeButton.addTarget(self, action: #selector(self.close), for: .touchUpInside)
         
@@ -86,26 +85,26 @@ class GameViewController: UIViewController {
 
 extension GameViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return controller.currentEmojiSet.count
+        return gameModel.currentSet.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = GameCell.cell(collectionView: collectionView, indexPath: indexPath)
-        cell.id = controller.currentEmojiSet[indexPath.row]
+        cell.id = gameModel.currentSet[indexPath.row]
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return controller.cellSize
+        return gameModel.cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
         if let cell = collectionView.cellForItem(at: indexPath) as? GameCell {
-            controller.wasPushedCell(cell: cell)
+            gameModel.wasPushedCell(cell: cell)
         }
     }
 }

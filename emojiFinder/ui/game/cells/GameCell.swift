@@ -9,12 +9,13 @@
 import UIKit
 
 class GameCell: UICollectionViewCell, CellRegistable, CellDequeueReusable {
-
-    @IBOutlet weak var info: UILabel! {
+    
+    @IBOutlet weak var icon: UIImageView! {
         didSet {
-            info.isHidden = true 
+            icon.isHidden = true
         }
     }
+    
     @IBOutlet weak var temHideView: UIView! {
         didSet {
             temHideView.layer.cornerRadius = 4
@@ -26,7 +27,7 @@ class GameCell: UICollectionViewCell, CellRegistable, CellDequeueReusable {
     
     var id = "" {
         didSet {
-            info.text = id
+            icon.image = UIImage(named: id) 
         }
     }
 }
@@ -38,17 +39,17 @@ extension GameCell: GameCellAdp {
     
     func hideLogo() {
         if !isUnhide {
-            info.isHidden = true
+            icon.isHidden = true
         }
     }
     
     func unhideLogo() {
-        info.isHidden = false
+        icon.isHidden = false
     }
     
     func setAsOpen() {
         isUnhide = true
-        info.isHidden = false
+        icon.isHidden = false
     }
 }
 

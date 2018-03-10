@@ -34,7 +34,8 @@ class MenuViewController: UIViewController {
     
     fileprivate func showGameVC(complexity: GameComplexity) {
         if let vc = GameViewController.storyboardInstance {
-            vc.complexity = complexity
+            let gameModel = GameEngine(complexity: complexity, iconIds: Constants.pixelIconsIds)
+            vc.gameModel = gameModel
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

@@ -18,19 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraund" translatesAutoresizingMaskIntoConstraints="NO" id="WBJ-XJ-dmZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WBJ-XJ-dmZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXZ-2E-T4A">
-                                <rect key="frame" x="16" y="36" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXZ-2E-T4A">
+                                <rect key="frame" x="16" y="36" width="46" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6Dl-0j-UOP"/>
+                                    <constraint firstAttribute="height" constant="46" id="6Dl-0j-UOP"/>
                                     <constraint firstAttribute="width" constant="46" id="yjU-zj-Gue"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="10" maxX="20" maxY="10"/>
+                                <state key="normal" image="close"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-IH-Osy">
-                                <rect key="frame" x="8" y="76" width="359" height="591"/>
+                                <rect key="frame" x="8" y="92" width="359" height="575"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="E3F-40-uXF">
                                     <size key="itemSize" width="50" height="50"/>
@@ -40,18 +42,20 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-vk-hBe">
-                                <rect key="frame" x="313" y="36" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-vk-hBe">
+                                <rect key="frame" x="313" y="36" width="46" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3Ga-kH-0r0"/>
+                                    <constraint firstAttribute="height" constant="46" id="3Ga-kH-0r0"/>
                                     <constraint firstAttribute="width" constant="46" id="gDe-06-E0U"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="pause"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvK-t6-8Nv">
-                                <rect key="frame" x="72" y="41" width="231" height="21"/>
+                                <rect key="frame" x="72" y="49" width="231" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -88,6 +92,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgraund" width="1280" height="1280"/>
+        <image name="bg" width="3500" height="3500"/>
+        <image name="close" width="65" height="64"/>
+        <image name="pause" width="43" height="80"/>
     </resources>
 </document>

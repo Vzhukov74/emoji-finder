@@ -34,26 +34,23 @@ protocol GameTimer: class {
 
 class GameEngine {
     
-    let emoji = ["👻", "🤡", "👾", "🤖", "😈", "🎃", "👽", "😻", "👍", "👩‍💻", "👨🏻‍💻", "🧙‍♂️", "🧟‍♀️", "👑", "🐼", "🙈", "🙉", "🙊", "🐷", "🐔", "🐙", "🦖", "🐍", "🍄", "⛄️", "☂️", "🍳", "🎱", "🎲", "💣"]
+    private let iconsIds: [String]!
+    private let complexity: GameComplexity!
+    private var pusedCells = PushedCells()
+    private let soundEngine = SoundEngine()
+    private var _numberOfPairs: Int = 0
+    private var numberOfGuessedPairs: Int = 0
     
     var cellSize = CGSize(width: 60, height: 60)
-    
-    fileprivate let complexity: GameComplexity!
-    fileprivate var pusedCells = PushedCells()
-    
-    fileprivate let soundEngine = SoundEngine()
-    
-    fileprivate var _numberOfPairs: Int = 0
-    fileprivate var numberOfGuessedPairs: Int = 0
-    
-    var currentEmojiSet = [String]()
+    var currentSet = [String]()
     
     var numberOfMotion = 0
     
     weak var timerDelegate: GameTimer?
     
-    init(complexity: GameComplexity) {
+    init(complexity: GameComplexity, iconIds: [String]) {
         self.complexity = complexity
+        self.iconsIds = iconIds
         
         numberOfMotion = 0
         numberOfGuessedPairs = 0
@@ -67,7 +64,7 @@ class GameEngine {
             _numberOfPairs = 25
         }
         
-        currentEmojiSet = getRandomSetOfEmojiFor(size: _numberOfPairs * 2)
+        currentSet = getRandomSetFor(size: _numberOfPairs * 2)
     }
     
     func wasPushedCell(cell: GameCellAdp) {
@@ -128,12 +125,12 @@ class GameEngine {
     
     fileprivate func userWon() {
         let time = self.timerDelegate?.stop()
-        print(time)
+        print(time ?? 0)
     }
 }
 
 extension GameEngine {
-    func getRandomSetOfEmojiFor(size: Int) -> [String] {
+    func getRandomSetFor(size: Int) -> [String] {
         
         var result = [String]()
         
@@ -143,13 +140,13 @@ extension GameEngine {
         for _ in 0..<halfSize {
             var random: Int = 0
             repeat {
-                random = Int(arc4random_uniform((UInt32(emoji.count))))
+                random = Int(arc4random_uniform((UInt32(iconsIds.count))))
             } while randomNumbers.contains(random)
             randomNumbers.add(random)
             
-            let randomEmoji = emoji[random]
-            result.append(randomEmoji)
-            result.append(randomEmoji)
+            let randomIconId = iconsIds[random]
+            result.append(randomIconId)
+            result.append(randomIconId)
         }
         let randomResult = randomizeArray(array: result)
         

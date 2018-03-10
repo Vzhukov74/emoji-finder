@@ -23,28 +23,25 @@
                         <rect key="frame" x="4" y="4" width="32" height="32"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VI-x6-93X">
-                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TaX-Oc-saE">
+                        <rect key="frame" x="10" y="10" width="20" height="20"/>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="7VI-x6-93X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9KM-vU-S9G"/>
-                <constraint firstItem="7VI-x6-93X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KP4-Ad-CLJ"/>
+                <constraint firstItem="TaX-Oc-saE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="ByG-Cx-JGa"/>
+                <constraint firstAttribute="trailing" secondItem="TaX-Oc-saE" secondAttribute="trailing" constant="10" id="DS0-YL-s46"/>
                 <constraint firstAttribute="trailing" secondItem="ldi-lX-0Pf" secondAttribute="trailing" constant="4" id="Vzx-dQ-j3b"/>
                 <constraint firstItem="ldi-lX-0Pf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="YLd-iG-EQZ"/>
                 <constraint firstAttribute="bottom" secondItem="ldi-lX-0Pf" secondAttribute="bottom" constant="4" id="ia5-rI-moC"/>
-                <constraint firstAttribute="trailing" secondItem="7VI-x6-93X" secondAttribute="trailing" id="kv3-zd-wsl"/>
-                <constraint firstAttribute="bottom" secondItem="7VI-x6-93X" secondAttribute="bottom" id="pQR-Zn-2QC"/>
+                <constraint firstAttribute="bottom" secondItem="TaX-Oc-saE" secondAttribute="bottom" constant="10" id="qdU-mn-cWl"/>
                 <constraint firstItem="ldi-lX-0Pf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="vOw-Dj-9T3"/>
+                <constraint firstItem="TaX-Oc-saE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="vbm-Zb-iXv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="info" destination="7VI-x6-93X" id="luG-1x-DRu"/>
+                <outlet property="icon" destination="TaX-Oc-saE" id="c6D-im-6hT"/>
                 <outlet property="temHideView" destination="ldi-lX-0Pf" id="Kxt-xo-8fD"/>
             </connections>
         </collectionViewCell>
