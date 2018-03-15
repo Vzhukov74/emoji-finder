@@ -24,6 +24,11 @@
 		F5899EDA1FBF198900728630 /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5899ED91FBF198900728630 /* GameViewController.storyboard */; };
 		F5899EDC1FBF199800728630 /* LoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5899EDB1FBF199800728630 /* LoadingViewController.storyboard */; };
 		F5899EDE1FBF19A800728630 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5899EDD1FBF19A800728630 /* MenuViewController.storyboard */; };
+		F5990FF020592E66004383D8 /* main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5990FEE20592E66004383D8 /* main.xcdatamodeld */; };
+		F5990FFE205932FB004383D8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5990FFD205932FA004383D8 /* CoreData.framework */; };
+		F5990FFF2059331A004383D8 /* main.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = F5990FEE20592E66004383D8 /* main.xcdatamodeld */; };
+		F599100E205938ED004383D8 /* GameResult+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599100C205938ED004383D8 /* GameResult+CoreDataProperties.swift */; };
+		F599100F205938ED004383D8 /* GameResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F599100D205938ED004383D8 /* GameResult+CoreDataClass.swift */; };
 		F5B8AD3B1FBDD4A6007326E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B8AD3A1FBDD4A6007326E4 /* AppDelegate.swift */; };
 		F5B8AD421FBDD4A6007326E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B8AD411FBDD4A6007326E4 /* Assets.xcassets */; };
 		F5B8AD451FBDD4A6007326E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B8AD431FBDD4A6007326E4 /* LaunchScreen.storyboard */; };
@@ -53,6 +58,10 @@
 		F5899ED91FBF198900728630 /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		F5899EDB1FBF199800728630 /* LoadingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingViewController.storyboard; sourceTree = "<group>"; };
 		F5899EDD1FBF19A800728630 /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
+		F5990FEF20592E66004383D8 /* main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = main.xcdatamodel; sourceTree = "<group>"; };
+		F5990FFD205932FA004383D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F599100C205938ED004383D8 /* GameResult+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F599100D205938ED004383D8 /* GameResult+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameResult+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F5B8AD371FBDD4A6007326E4 /* emojiFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emojiFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B8AD3A1FBDD4A6007326E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5B8AD411FBDD4A6007326E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5990FFE205932FB004383D8 /* CoreData.framework in Frameworks */,
 				889C80349EDAEA2631A25E7E /* Pods_emojiFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +98,7 @@
 		C93015AF84E28CBAF9022F14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5990FFD205932FA004383D8 /* CoreData.framework */,
 				2310B305F4D8DA55880CC51C /* Pods_emojiFinder.framework */,
 			);
 			name = Frameworks;
@@ -172,6 +183,16 @@
 			path = main;
 			sourceTree = "<group>";
 		};
+		F5990FED20592E33004383D8 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				F5990FEE20592E66004383D8 /* main.xcdatamodeld */,
+				F599100D205938ED004383D8 /* GameResult+CoreDataClass.swift */,
+				F599100C205938ED004383D8 /* GameResult+CoreDataProperties.swift */,
+			);
+			path = database;
+			sourceTree = "<group>";
+		};
 		F5B8AD2E1FBDD4A6007326E4 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +215,7 @@
 		F5B8AD391FBDD4A6007326E4 /* emojiFinder */ = {
 			isa = PBXGroup;
 			children = (
+				F5990FED20592E33004383D8 /* database */,
 				F5C2744B204809BB005415E1 /* common */,
 				F5C03E691FD6D83D0006484F /* models */,
 				F5899EBE1FBF176800728630 /* ui */,
@@ -284,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5990FFF2059331A004383D8 /* main.xcdatamodeld in Resources */,
 				F5C03E6D1FD6D9B90006484F /* coincidence.wav in Resources */,
 				F5899EDE1FBF19A800728630 /* MenuViewController.storyboard in Resources */,
 				F5899EC71FBF188B00728630 /* StatisticsViewController.storyboard in Resources */,
@@ -365,15 +388,18 @@
 			files = (
 				F5899ECD1FBF18CA00728630 /* GameViewController.swift in Sources */,
 				F5899EC91FBF18A000728630 /* StatisticsViewController.swift in Sources */,
+				F5990FF020592E66004383D8 /* main.xcdatamodeld in Sources */,
 				F52282171FC5873900DB1C1C /* GameCell.swift in Sources */,
 				F5899ED41FBF195C00728630 /* MainNavigationController.swift in Sources */,
 				F5899EC51FBF17E600728630 /* StoryboardList.swift in Sources */,
+				F599100F205938ED004383D8 /* GameResult+CoreDataClass.swift in Sources */,
 				F522822D1FC7065600DB1C1C /* GameEngine.swift in Sources */,
 				F5C03E6B1FD6D85C0006484F /* SoundEngine.swift in Sources */,
 				F5899ED11FBF192A00728630 /* MenuViewController.swift in Sources */,
 				F5B8AD3B1FBDD4A6007326E4 /* AppDelegate.swift in Sources */,
 				F5899ECB1FBF18B800728630 /* WinViewController.swift in Sources */,
 				F5899ECF1FBF18DA00728630 /* LoadingViewController.swift in Sources */,
+				F599100E205938ED004383D8 /* GameResult+CoreDataProperties.swift in Sources */,
 				F5C2744D204809E5005415E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +579,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F5990FEE20592E66004383D8 /* main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F5990FEF20592E66004383D8 /* main.xcdatamodel */,
+			);
+			currentVersion = F5990FEF20592E66004383D8 /* main.xcdatamodel */;
+			path = main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F5B8AD2F1FBDD4A6007326E4 /* Project object */;
 }
