@@ -1,17 +1,18 @@
 //
-//  GameEngine.swift
+//  VZGameEngine.swift
 //  emojiFinder
 //
-//  Created by Vlad on 23.11.2017.
-//  Copyright © 2017 Vlad. All rights reserved.
+//  Created by Vlad on 10.04.2018.
+//  Copyright © 2018 Vlad. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-private struct PushedCells {
-    weak var cellOne: GameCellAdp?
-    weak var cellTwo: GameCellAdp?
+
+private struct VZPushedCells {
+    weak var cellOne: VZGameCellAdp?
+    weak var cellTwo: VZGameCellAdp?
     
     mutating func reset() {
         cellOne = nil
@@ -19,25 +20,18 @@ private struct PushedCells {
     }
 }
 
-protocol GameCellAdp: class {
-    func cellDataId() -> String
-    func hideLogo()
-    func unhideLogo()
-    func setAsOpen()
-}
-
-protocol GameTimer: class {
+protocol VZGameTimer: class {
     func start()
     func stop() -> Int
     func reset()
 }
 
-class GameEngine {
+class VZGameEngine {
     
     private let iconsIds: [String]!
-    private let complexity: GameComplexity!
-    private var pusedCells = PushedCells()
+    private let complexity: VZGameComplexity!
     private let soundEngine = SoundEngine()
+    private var pusedCells = VZPushedCells()
     private var _numberOfPairs: Int = 0
     private var numberOfGuessedPairs: Int = 0
     
@@ -46,9 +40,10 @@ class GameEngine {
     
     var numberOfMotion = 0
     
-    weak var timerDelegate: GameTimer?
+    weak var timerDelegate: VZGameTimer?
+    var userWonAction: ((_ time: Int64, _ actions: Int32, _ complexity: VZGameComplexity) -> Void)?
     
-    init(complexity: GameComplexity, iconIds: [String]) {
+    init(complexity: VZGameComplexity, iconIds: [String]) {
         self.complexity = complexity
         self.iconsIds = iconIds
         
@@ -64,10 +59,10 @@ class GameEngine {
             _numberOfPairs = 25
         }
         
-        currentSet = getRandomSetFor(size: _numberOfPairs * 2)
+        currentSet = getRandomParsSetFor(size: _numberOfPairs)
     }
     
-    func wasPushedCell(cell: GameCellAdp) {
+    func wasPushedCell(cell: VZGameCellAdp) {
         if pusedCells.cellOne == nil {
             pusedCells.cellOne = cell
             cell.unhideLogo()
@@ -125,22 +120,22 @@ class GameEngine {
     
     fileprivate func userWon() {
         let time = self.timerDelegate?.stop()
-        print(time ?? 0)
+        self.userWonAction?(Int64(time!), Int32(numberOfMotion), complexity)
     }
 }
 
-extension GameEngine {
-    func getRandomSetFor(size: Int) -> [String] {
+extension VZGameEngine {
+    func getRandomParsSetFor(size: Int) -> [String] {
         
         var result = [String]()
         
         let randomNumbers: NSMutableSet = []
-        let halfSize = size / 2
         
-        for _ in 0..<halfSize {
+        for _ in 0..<size {
             var random: Int = 0
             repeat {
                 random = Int(arc4random_uniform((UInt32(iconsIds.count))))
+                if randomNumbers.count == iconsIds.count { break }
             } while randomNumbers.contains(random)
             randomNumbers.add(random)
             

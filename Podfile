@@ -8,9 +8,8 @@ target 'emojiFinder' do
   # Pods for emojiFinder
   pod 'SwiftLint'
   pod 'SwiftyBeaver'
-  pod 'RealmSwift'
 
   pod 'Fabric'
   pod 'Crashlytics'
-
+  
 end

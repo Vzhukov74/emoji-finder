@@ -34,41 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setMainVC()
         
-        forTest()
-        
         return true
     }
-    
-    func forTest() {
-        let entityDescription = NSEntityDescription.entity(forEntityName: "GameResult", in: self.managedObjectContext)
-
-        let managedObject = GameResult(entity: entityDescription!, insertInto: self.managedObjectContext)
         
-        // Установка значения атрибута
-        managedObject.user_name = "Pither"// .setValue("Pither", forKey: "user_name")
-        managedObject.setValue(10, forKey: "actions")
-        managedObject.setValue(20, forKey: "time")
-        managedObject.setValue(1, forKey: "complexity")
-        
-        // Извлечение значения атрибута
-        let name = managedObject.value(forKey: "user_name")
-        print("name = \(name)")
-        
-        // Запись объекта
-        self.saveContext()
-        
-        // Извление записей
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameResult")
-        do {
-            let results = try self.managedObjectContext.fetch(fetchRequest)
-            for result in results as! [GameResult] {
-                print("name - \(result.user_name!)")
-            }
-        } catch {
-            print(error)
-        }
-    }
-    
     func setLoadingVC() {
         let vc = LoadingViewController.storyboardInstance
         window?.rootViewController = vc
@@ -99,53 +67,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    // MARK: - Core Data stack
-    lazy var applicationDocumentsDirectory: NSURL = {
-        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return urls[urls.count-1] as NSURL
-    }()
-    
-    lazy var managedObjectModel: NSManagedObjectModel = {
-        let modelURL = Bundle.main.url(forResource: "main", withExtension: "momd")!
-        return NSManagedObjectModel(contentsOf: modelURL)!
-    }()
-    
-    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
-        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.appendingPathComponent("SingleViewCoreData.sqlite")
-        var failureReason = "There was an error creating or loading the application's saved data."
-        do {
-            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
-        } catch {
-            var dict = [String: AnyObject]()
-            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data" as AnyObject
-            dict[NSLocalizedFailureReasonErrorKey] = failureReason as AnyObject
-            dict[NSUnderlyingErrorKey] = error as NSError
-            let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
-            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
-            abort()
-        }
-        return coordinator
-    }()
-    
-    lazy var managedObjectContext: NSManagedObjectContext = {
-        let coordinator = self.persistentStoreCoordinator
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = coordinator
-        return managedObjectContext
-    }()
-    
-    func saveContext () {
-        if managedObjectContext.hasChanges {
-            do {
-                try managedObjectContext.save()
-            } catch {
-                let nserror = error as NSError
-                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-                abort()
-            }
-        }
     }
 }

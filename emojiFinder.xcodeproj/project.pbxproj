@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		889C80349EDAEA2631A25E7E /* Pods_emojiFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2310B305F4D8DA55880CC51C /* Pods_emojiFinder.framework */; };
+		9AB991185BED7B034EE4E71D /* Pods_emojiFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA27013C6B808D2B7B294CF3 /* Pods_emojiFinder.framework */; };
+		F5159A5A207CCFE500C705C1 /* StatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A59207CCFE500C705C1 /* StatisticsModel.swift */; };
+		F5159A5E207CD42D00C705C1 /* UICellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A5D207CD42D00C705C1 /* UICellExt.swift */; };
+		F5159A61207CD4C900C705C1 /* VZGameCellAdp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A60207CD4C900C705C1 /* VZGameCellAdp.swift */; };
+		F5159A63207CD5E500C705C1 /* VZGameComplexity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A62207CD5E500C705C1 /* VZGameComplexity.swift */; };
+		F5159A65207CD60E00C705C1 /* VZGameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A64207CD60E00C705C1 /* VZGameEngine.swift */; };
+		F5159A67207CD7CA00C705C1 /* ButtonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A66207CD7CA00C705C1 /* ButtonTypes.swift */; };
+		F5159A69207E010100C705C1 /* CoreDataExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A68207E010100C705C1 /* CoreDataExt.swift */; };
+		F5159A6B207E013A00C705C1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A6A207E013A00C705C1 /* CoreDataManager.swift */; };
+		F5159A6E207E075C00C705C1 /* VZGameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A6D207E075C00C705C1 /* VZGameResult.swift */; };
+		F5159A71207E24FE00C705C1 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5159A70207E24FD00C705C1 /* PressStart2P.ttf */; };
 		F52282171FC5873900DB1C1C /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52282151FC5873900DB1C1C /* GameCell.swift */; };
 		F52282181FC5873A00DB1C1C /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52282161FC5873900DB1C1C /* GameCell.xib */; };
-		F522822D1FC7065600DB1C1C /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522822C1FC7065600DB1C1C /* GameEngine.swift */; };
 		F5899EC51FBF17E600728630 /* StoryboardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5899EC41FBF17E600728630 /* StoryboardList.swift */; };
 		F5899EC71FBF188B00728630 /* StatisticsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5899EC61FBF188B00728630 /* StatisticsViewController.storyboard */; };
 		F5899EC91FBF18A000728630 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5899EC81FBF18A000728630 /* StatisticsViewController.swift */; };
@@ -39,12 +48,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2310B305F4D8DA55880CC51C /* Pods_emojiFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emojiFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E7B74A5FF25C169E9D2D386 /* Pods-emojiFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emojiFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder.release.xcconfig"; sourceTree = "<group>"; };
+		0C1A773F2B50C6E318315AFC /* Pods-emojiFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emojiFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		92D9679DFF0A03D1211AF2AE /* Pods-emojiFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emojiFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder.release.xcconfig"; sourceTree = "<group>"; };
+		BA27013C6B808D2B7B294CF3 /* Pods_emojiFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emojiFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5159A59207CCFE500C705C1 /* StatisticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsModel.swift; sourceTree = "<group>"; };
+		F5159A5D207CD42D00C705C1 /* UICellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICellExt.swift; sourceTree = "<group>"; };
+		F5159A60207CD4C900C705C1 /* VZGameCellAdp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VZGameCellAdp.swift; sourceTree = "<group>"; };
+		F5159A62207CD5E500C705C1 /* VZGameComplexity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VZGameComplexity.swift; sourceTree = "<group>"; };
+		F5159A64207CD60E00C705C1 /* VZGameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VZGameEngine.swift; sourceTree = "<group>"; };
+		F5159A66207CD7CA00C705C1 /* ButtonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTypes.swift; sourceTree = "<group>"; };
+		F5159A68207E010100C705C1 /* CoreDataExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataExt.swift; sourceTree = "<group>"; };
+		F5159A6A207E013A00C705C1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F5159A6D207E075C00C705C1 /* VZGameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VZGameResult.swift; sourceTree = "<group>"; };
+		F5159A70207E24FD00C705C1 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
 		F52282151FC5873900DB1C1C /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		F52282161FC5873900DB1C1C /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
-		F522822C1FC7065600DB1C1C /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
-		F586DA927DAB09A74EDCC36E /* Pods-emojiFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emojiFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		F5899EC41FBF17E600728630 /* StoryboardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardList.swift; sourceTree = "<group>"; };
 		F5899EC61FBF188B00728630 /* StatisticsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticsViewController.storyboard; sourceTree = "<group>"; };
 		F5899EC81FBF18A000728630 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -79,18 +97,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5990FFE205932FB004383D8 /* CoreData.framework in Frameworks */,
-				889C80349EDAEA2631A25E7E /* Pods_emojiFinder.framework in Frameworks */,
+				9AB991185BED7B034EE4E71D /* Pods_emojiFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC4244EDD3A21C234E562734 /* Pods */ = {
+		C730AD1E60B24CDBBA6B3BB5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F586DA927DAB09A74EDCC36E /* Pods-emojiFinder.debug.xcconfig */,
-				9E7B74A5FF25C169E9D2D386 /* Pods-emojiFinder.release.xcconfig */,
+				0C1A773F2B50C6E318315AFC /* Pods-emojiFinder.debug.xcconfig */,
+				92D9679DFF0A03D1211AF2AE /* Pods-emojiFinder.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -99,9 +117,45 @@
 			isa = PBXGroup;
 			children = (
 				F5990FFD205932FA004383D8 /* CoreData.framework */,
-				2310B305F4D8DA55880CC51C /* Pods_emojiFinder.framework */,
+				BA27013C6B808D2B7B294CF3 /* Pods_emojiFinder.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5159A5B207CD3F600C705C1 /* developer */ = {
+			isa = PBXGroup;
+			children = (
+				F5159A5C207CD41300C705C1 /* extensions */,
+			);
+			path = developer;
+			sourceTree = "<group>";
+		};
+		F5159A5C207CD41300C705C1 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F5159A5D207CD42D00C705C1 /* UICellExt.swift */,
+				F5159A68207E010100C705C1 /* CoreDataExt.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		F5159A5F207CD4A500C705C1 /* game engine */ = {
+			isa = PBXGroup;
+			children = (
+				F5159A60207CD4C900C705C1 /* VZGameCellAdp.swift */,
+				F5159A62207CD5E500C705C1 /* VZGameComplexity.swift */,
+				F5159A6D207E075C00C705C1 /* VZGameResult.swift */,
+				F5159A64207CD60E00C705C1 /* VZGameEngine.swift */,
+			);
+			path = "game engine";
+			sourceTree = "<group>";
+		};
+		F5159A6F207E24EF00C705C1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F5159A70207E24FD00C705C1 /* PressStart2P.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		F52282141FC586FF00DB1C1C /* cells */ = {
@@ -151,7 +205,6 @@
 				F52282141FC586FF00DB1C1C /* cells */,
 				F5899ECC1FBF18CA00728630 /* GameViewController.swift */,
 				F5899ED91FBF198900728630 /* GameViewController.storyboard */,
-				F522822C1FC7065600DB1C1C /* GameEngine.swift */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -189,6 +242,7 @@
 				F5990FEE20592E66004383D8 /* main.xcdatamodeld */,
 				F599100D205938ED004383D8 /* GameResult+CoreDataClass.swift */,
 				F599100C205938ED004383D8 /* GameResult+CoreDataProperties.swift */,
+				F5159A6A207E013A00C705C1 /* CoreDataManager.swift */,
 			);
 			path = database;
 			sourceTree = "<group>";
@@ -199,8 +253,8 @@
 				F5CF43401FDA9FA700038006 /* .swiftlint.yml */,
 				F5B8AD391FBDD4A6007326E4 /* emojiFinder */,
 				F5B8AD381FBDD4A6007326E4 /* Products */,
-				BC4244EDD3A21C234E562734 /* Pods */,
 				C93015AF84E28CBAF9022F14 /* Frameworks */,
+				C730AD1E60B24CDBBA6B3BB5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +269,8 @@
 		F5B8AD391FBDD4A6007326E4 /* emojiFinder */ = {
 			isa = PBXGroup;
 			children = (
+				F5159A6F207E24EF00C705C1 /* fonts */,
+				F5159A5B207CD3F600C705C1 /* developer */,
 				F5990FED20592E33004383D8 /* database */,
 				F5C2744B204809BB005415E1 /* common */,
 				F5C03E691FD6D83D0006484F /* models */,
@@ -231,7 +287,9 @@
 		F5C03E691FD6D83D0006484F /* models */ = {
 			isa = PBXGroup;
 			children = (
+				F5159A5F207CD4A500C705C1 /* game engine */,
 				F5C03E6A1FD6D85C0006484F /* SoundEngine.swift */,
+				F5159A59207CCFE500C705C1 /* StatisticsModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -240,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				F5C2744C204809E5005415E1 /* Constants.swift */,
+				F5159A66207CD7CA00C705C1 /* ButtonTypes.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -251,12 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5B8AD491FBDD4A6007326E4 /* Build configuration list for PBXNativeTarget "emojiFinder" */;
 			buildPhases = (
-				E5E1893A5234A790AE9AF901 /* [CP] Check Pods Manifest.lock */,
+				88BB32354BE88326923789B6 /* [CP] Check Pods Manifest.lock */,
 				F5B8AD331FBDD4A6007326E4 /* Sources */,
 				F5B8AD341FBDD4A6007326E4 /* Frameworks */,
 				F5B8AD351FBDD4A6007326E4 /* Resources */,
-				15C2C73ACDD4A38864255E69 /* [CP] Embed Pods Frameworks */,
-				289280B450039801407E6C41 /* [CP] Copy Pods Resources */,
+				00D74C9CD340FED7D9BB0352 /* [CP] Embed Pods Frameworks */,
+				732364557EA4237E34793455 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,7 +333,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Vlad;
 				TargetAttributes = {
 					F5B8AD361FBDD4A6007326E4 = {
@@ -306,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5159A71207E24FE00C705C1 /* PressStart2P.ttf in Resources */,
 				F5990FFF2059331A004383D8 /* main.xcdatamodeld in Resources */,
 				F5C03E6D1FD6D9B90006484F /* coincidence.wav in Resources */,
 				F5899EDE1FBF19A800728630 /* MenuViewController.storyboard in Resources */,
@@ -324,21 +384,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15C2C73ACDD4A38864255E69 /* [CP] Embed Pods Frameworks */ = {
+		00D74C9CD340FED7D9BB0352 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +402,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		289280B450039801407E6C41 /* [CP] Copy Pods Resources */ = {
+		732364557EA4237E34793455 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,7 +417,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5E1893A5234A790AE9AF901 /* [CP] Check Pods Manifest.lock */ = {
+		88BB32354BE88326923789B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,16 +445,24 @@
 				F5899ECD1FBF18CA00728630 /* GameViewController.swift in Sources */,
 				F5899EC91FBF18A000728630 /* StatisticsViewController.swift in Sources */,
 				F5990FF020592E66004383D8 /* main.xcdatamodeld in Sources */,
+				F5159A61207CD4C900C705C1 /* VZGameCellAdp.swift in Sources */,
+				F5159A69207E010100C705C1 /* CoreDataExt.swift in Sources */,
 				F52282171FC5873900DB1C1C /* GameCell.swift in Sources */,
 				F5899ED41FBF195C00728630 /* MainNavigationController.swift in Sources */,
 				F5899EC51FBF17E600728630 /* StoryboardList.swift in Sources */,
 				F599100F205938ED004383D8 /* GameResult+CoreDataClass.swift in Sources */,
-				F522822D1FC7065600DB1C1C /* GameEngine.swift in Sources */,
+				F5159A63207CD5E500C705C1 /* VZGameComplexity.swift in Sources */,
+				F5159A6B207E013A00C705C1 /* CoreDataManager.swift in Sources */,
+				F5159A65207CD60E00C705C1 /* VZGameEngine.swift in Sources */,
 				F5C03E6B1FD6D85C0006484F /* SoundEngine.swift in Sources */,
 				F5899ED11FBF192A00728630 /* MenuViewController.swift in Sources */,
 				F5B8AD3B1FBDD4A6007326E4 /* AppDelegate.swift in Sources */,
 				F5899ECB1FBF18B800728630 /* WinViewController.swift in Sources */,
+				F5159A6E207E075C00C705C1 /* VZGameResult.swift in Sources */,
+				F5159A5E207CD42D00C705C1 /* UICellExt.swift in Sources */,
+				F5159A5A207CCFE500C705C1 /* StatisticsModel.swift in Sources */,
 				F5899ECF1FBF18DA00728630 /* LoadingViewController.swift in Sources */,
+				F5159A67207CD7CA00C705C1 /* ButtonTypes.swift in Sources */,
 				F599100E205938ED004383D8 /* GameResult+CoreDataProperties.swift in Sources */,
 				F5C2744D204809E5005415E1 /* Constants.swift in Sources */,
 			);
@@ -432,6 +496,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -439,6 +504,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -489,6 +555,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -496,6 +563,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -527,7 +595,7 @@
 		};
 		F5B8AD4A1FBDD4A6007326E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F586DA927DAB09A74EDCC36E /* Pods-emojiFinder.debug.xcconfig */;
+			baseConfigurationReference = 0C1A773F2B50C6E318315AFC /* Pods-emojiFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,7 +611,7 @@
 		};
 		F5B8AD4B1FBDD4A6007326E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E7B74A5FF25C169E9D2D386 /* Pods-emojiFinder.release.xcconfig */;
+			baseConfigurationReference = 92D9679DFF0A03D1211AF2AE /* Pods-emojiFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

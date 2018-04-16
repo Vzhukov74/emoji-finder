@@ -36,15 +36,21 @@ class GameViewController: UIViewController {
         }
     }
     
-    var gameModel: GameEngine!
+    var model: VZGameEngine!
     
-    fileprivate var controller: GameEngine!
     fileprivate var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        gameModel.timerDelegate = self
+        model.timerDelegate = self
+        model.userWonAction = { [weak self] (time, actions, complexity) in
+            if let vc = WinViewController.storyboardInstance {
+                let model = VZGameResult(time: time, actions: actions, complexity: complexity)
+                vc.model = model
+                self?.present(vc, animated: true, completion: nil)
+            }
+        }
         
         closeButton.addTarget(self, action: #selector(self.close), for: .touchUpInside)
         
@@ -85,31 +91,32 @@ class GameViewController: UIViewController {
 
 extension GameViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gameModel.currentSet.count
+        return model.currentSet.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = GameCell.cell(collectionView: collectionView, indexPath: indexPath)
-        cell.id = gameModel.currentSet[indexPath.row]
+        let id = model.currentSet[indexPath.row]
+        cell.configure(id: id)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return gameModel.cellSize
+        return model.cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
         if let cell = collectionView.cellForItem(at: indexPath) as? GameCell {
-            gameModel.wasPushedCell(cell: cell)
+            model.wasPushedCell(cell: cell)
         }
     }
 }
 
-extension GameViewController: GameTimer {
+extension GameViewController: VZGameTimer {
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setTimeLabel), userInfo: Date(), repeats: true)
     }
