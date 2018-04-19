@@ -7,7 +7,6 @@
 //
 import UIKit
 
-
 enum ButtonType {
     case menu
     

@@ -23,9 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraund" translatesAutoresizingMaskIntoConstraints="NO" id="33p-iw-Uuz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oH-JD-2Wb">
                                 <rect key="frame" x="16" y="267" width="343" height="360"/>
                                 <subviews>
@@ -93,12 +90,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MEr-z4-6sh" firstAttribute="bottom" secondItem="33p-iw-Uuz" secondAttribute="bottom" id="2rr-uT-j9I"/>
-                            <constraint firstItem="33p-iw-Uuz" firstAttribute="leading" secondItem="MEr-z4-6sh" secondAttribute="leading" id="CkK-qm-dLZ"/>
                             <constraint firstItem="MEr-z4-6sh" firstAttribute="bottom" secondItem="9oH-JD-2Wb" secondAttribute="bottom" constant="40" id="DbR-IP-jzt"/>
                             <constraint firstItem="MEr-z4-6sh" firstAttribute="trailing" secondItem="9oH-JD-2Wb" secondAttribute="trailing" constant="16" id="UFP-sX-4rN"/>
-                            <constraint firstItem="33p-iw-Uuz" firstAttribute="trailing" secondItem="MEr-z4-6sh" secondAttribute="trailing" id="moB-2h-w5n"/>
-                            <constraint firstItem="33p-iw-Uuz" firstAttribute="top" secondItem="dU0-YA-wEH" secondAttribute="top" id="uRh-U4-uOU"/>
                             <constraint firstItem="9oH-JD-2Wb" firstAttribute="leading" secondItem="MEr-z4-6sh" secondAttribute="leading" constant="16" id="wrI-c4-bw9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MEr-z4-6sh"/>
@@ -115,7 +108,4 @@
             <point key="canvasLocation" x="88.799999999999997" y="145.27736131934034"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="backgraund" width="1280" height="1280"/>
-    </resources>
 </document>

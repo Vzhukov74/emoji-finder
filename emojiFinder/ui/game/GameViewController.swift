@@ -11,12 +11,14 @@ import UIKit
 class GameViewController: UIViewController {
 
     @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var playButton: UIButton! {
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel! {
         didSet {
-            playButton.isHidden = true
+            timeLabel.text = ""
+            timeLabel.font = Fonts.menuFont
+            timeLabel.textColor = UIColor.white
         }
     }
-    @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -27,11 +29,11 @@ class GameViewController: UIViewController {
     fileprivate var isGameActive = false {
         didSet {
             if isGameActive {
-                playButton.isHidden = false
+                playButton.setImage(Images.pause, for: .normal)
                 start()
             } else {
-                playButton.isHidden = false
-                _ = pause()
+                playButton.setImage(Images.play, for: .normal)
+                _ = stop()
             }
         }
     }
@@ -43,26 +45,33 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        model.timerDelegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(self.restart), name: NotificationNames.playAgainNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.pauseGame), name: NotificationNames.appEnterInBackground, object: nil)
+        
+        Colors.addGradientBackgroundOn(view: self.view, with: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        
         model.userWonAction = { [weak self] (time, actions, complexity) in
-            if let vc = WinViewController.storyboardInstance {
-                let model = VZGameResult(time: time, actions: actions, complexity: complexity)
-                vc.model = model
-                self?.present(vc, animated: true, completion: nil)
-            }
+            self?.showWonVC(time: time, actions: actions, complexity: complexity)
         }
         
         closeButton.addTarget(self, action: #selector(self.close), for: .touchUpInside)
+        playButton.addTarget(self, action: #selector(self.playAndPauseButtonAction), for: .touchUpInside)
         
         collectionView.dataSource = self
         collectionView.delegate = self
     }
     
-    @objc func close() {
+    @objc private func restart() {
+        model.restart()
+        timeLabel.text = ""
+        collectionView.reloadData()
+    }
+    
+    @objc private func close() {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc func setTimeLabel() {
+    @objc private func setTimeLabel() {
         let elapsed = -(timer.userInfo as! Date).timeIntervalSinceNow
         
         if elapsed > (60 * 60) {
@@ -80,11 +89,24 @@ class GameViewController: UIViewController {
         }
     }
     
-    @objc func playAndPauseButtonAction() {
+    @objc private func pauseGame() {
+        isGameActive = false
+    }
+    
+    @objc private func playAndPauseButtonAction() {
         isGameActive = !isGameActive
+    }
+    
+    private func showWonVC(time: Int64, actions: Int32, complexity: VZGameComplexity) {
+        if let vc = WinViewController.storyboardInstance {
+            let model = VZGameResult(time: time, actions: actions, complexity: complexity)
+            vc.model = model
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     deinit {
+        NotificationCenter.default.removeObserver(self)
         print("deinit - GameViewController")
     }
 }
@@ -97,8 +119,8 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = GameCell.cell(collectionView: collectionView, indexPath: indexPath)
-        let id = model.currentSet[indexPath.row]
-        cell.configure(id: id)
+        let cellModel = model.currentSet[indexPath.row]
+        cell.configure(model: cellModel)
         
         return cell
     }
@@ -119,6 +141,7 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
 extension GameViewController: VZGameTimer {
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setTimeLabel), userInfo: Date(), repeats: true)
+         timeLabel.text = "0"
     }
     
     func stop() -> Int {

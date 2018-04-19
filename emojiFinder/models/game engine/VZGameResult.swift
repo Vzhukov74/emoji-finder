@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreData
+import SwiftyBeaver
 
 class VZGameResult {
     let time: Int64!
@@ -29,12 +31,21 @@ class VZGameResult {
     }
     
     private func saveWith(name: String) {
-        let result = GameResult()
+        
+        let coordinator = CoreDataManager.shared.persistentStoreCoordinator
+        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        context.persistentStoreCoordinator = coordinator
+        
+        let result = GameResult(within: context)
         result.user_name = name
         result.time = time
         result.actions = actions
         result.complexity = Int32(complexity.intValue())
         
-        CoreDataManager.shared.saveContext()
+        do {
+            try context.save()
+        } catch {
+            SwiftyBeaver.error(error.localizedDescription)
+        }
     }
 }

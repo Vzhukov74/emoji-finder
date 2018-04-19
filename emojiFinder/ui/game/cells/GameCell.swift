@@ -9,7 +9,7 @@
 import UIKit
 
 class GameCell: UICollectionViewCell, CellRegistable, CellDequeueReusable, VZGameCellAdp {
-    
+
     @IBOutlet weak var icon: UIImageView! {
         didSet {
             icon.isHidden = true
@@ -24,15 +24,15 @@ class GameCell: UICollectionViewCell, CellRegistable, CellDequeueReusable, VZGam
     }
     
     //MARK: - implementation GameCellAdp protocol
-    var _isHidden = false {
+    var _model: VZGameCellModel? {
         didSet {
-            icon.isHidden = _isHidden
+            icon.image = UIImage(named: _model!._id)
         }
     }
-    var _isCellGuessed = false
-    var _id = "" {
+    
+    var _isHidden: Bool = false {
         didSet {
-            icon.image = UIImage(named: _id)
+            icon.isHidden = _isHidden
         }
     }
 }

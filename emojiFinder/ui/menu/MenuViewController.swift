@@ -55,11 +55,13 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        
+        Colors.addGradientBackgroundOn(view: self.view, with: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     }
     
     fileprivate func showGameVC(complexity: VZGameComplexity) {
         if let vc = GameViewController.storyboardInstance {
-            let model = VZGameEngine(complexity: complexity, iconIds: Constants.pixelIconsIds)
+            let model = VZGameEngine(complexity: complexity, iconIds: Constants.pixelIconsIds, delegate: vc)
             vc.model = model
             self.navigationController?.pushViewController(vc, animated: true)
         }

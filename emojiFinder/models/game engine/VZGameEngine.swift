@@ -36,19 +36,17 @@ class VZGameEngine {
     private var numberOfGuessedPairs: Int = 0
     
     var cellSize = CGSize(width: 60, height: 60)
-    var currentSet = [String]()
+    var currentSet = [VZGameCellModel]()
     
     var numberOfMotion = 0
     
     weak var timerDelegate: VZGameTimer?
     var userWonAction: ((_ time: Int64, _ actions: Int32, _ complexity: VZGameComplexity) -> Void)?
     
-    init(complexity: VZGameComplexity, iconIds: [String]) {
+    init(complexity: VZGameComplexity, iconIds: [String], delegate: VZGameTimer) {
         self.complexity = complexity
         self.iconsIds = iconIds
-        
-        numberOfMotion = 0
-        numberOfGuessedPairs = 0
+        self.timerDelegate = delegate
         
         switch complexity {
         case .easy:
@@ -59,7 +57,11 @@ class VZGameEngine {
             _numberOfPairs = 25
         }
         
-        currentSet = getRandomParsSetFor(size: _numberOfPairs)
+        configure()
+    }
+    
+    func restart() {
+        configure()
     }
     
     func wasPushedCell(cell: VZGameCellAdp) {
@@ -90,13 +92,25 @@ class VZGameEngine {
         }
     }
     
-    fileprivate func resetCells() {
+    private func configure() {
+        numberOfMotion = 0
+        numberOfGuessedPairs = 0
+        
+        pusedCells.reset()
+        self.timerDelegate?.reset()
+        
+        let idSet = getRandomParsSetFor(size: _numberOfPairs)
+
+        currentSet = idSet.map({ VZGameCellModel(_isHidden: true, _isCellGuessed: false, _id: $0)  })
+    }
+    
+    private func resetCells() {
         pusedCells.cellOne?.hideLogo()
         pusedCells.cellTwo?.hideLogo()
         pusedCells.reset()
     }
     
-    fileprivate func checkCells() {
+    private func checkCells() {
         if pusedCells.cellOne != nil && pusedCells.cellTwo != nil {
             if pusedCells.cellOne!.cellDataId() == pusedCells.cellTwo!.cellDataId() {
                 pusedCells.cellOne!.setAsOpen()
@@ -109,7 +123,7 @@ class VZGameEngine {
         }
     }
     
-    fileprivate func userGuessedPair() {
+    private func userGuessedPair() {
         numberOfGuessedPairs += 1
         soundEngine.playCoincidenceSound()
         
@@ -118,7 +132,7 @@ class VZGameEngine {
         }
     }
     
-    fileprivate func userWon() {
+    private func userWon() {
         let time = self.timerDelegate?.stop()
         self.userWonAction?(Int64(time!), Int32(numberOfMotion), complexity)
     }

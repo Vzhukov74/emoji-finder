@@ -8,12 +8,17 @@
 
 import Foundation
 
+struct VZGameCellModel {
+    var _isHidden: Bool
+    var _isCellGuessed: Bool
+    var _id: String
+}
+
 protocol VZGameCellAdp: class {
+    var _model: VZGameCellModel? {get set}
     var _isHidden: Bool {get set}
-    var _isCellGuessed: Bool {get set}
-    var _id: String {get set}
     
-    func configure(id: String)
+    func configure(model: VZGameCellModel)
     func cellDataId() -> String
     func hideLogo()
     func unhideLogo()
@@ -21,25 +26,29 @@ protocol VZGameCellAdp: class {
 }
 
 extension VZGameCellAdp {
-    func configure(id: String) {
-        self._id = id
+    func configure(model: VZGameCellModel) {
+        self._model = model
+        self._isHidden = model._isHidden
     }
     
     func cellDataId() -> String {
-        return _id
+        return _model!._id
     }
     
     func hideLogo() {
-        if _isCellGuessed {return}
-        _isHidden = true
+        if _model!._isCellGuessed {return}
+        _model!._isHidden = true
+        self._isHidden = _model!._isHidden
     }
     
     func unhideLogo() {
-        _isHidden = false
+        _model!._isHidden = false
+        self._isHidden = _model!._isHidden
     }
     
     func setAsOpen() {
-        _isCellGuessed = true
-        _isHidden = false
+        _model!._isCellGuessed = true
+        _model!._isHidden = false
+        self._isHidden = _model!._isHidden
     }
 }

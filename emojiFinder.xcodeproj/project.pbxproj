@@ -45,6 +45,9 @@
 		F5C03E6D1FD6D9B90006484F /* coincidence.wav in Resources */ = {isa = PBXBuildFile; fileRef = F5C03E6C1FD6D9B80006484F /* coincidence.wav */; };
 		F5C2744D204809E5005415E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C2744C204809E5005415E1 /* Constants.swift */; };
 		F5CF43411FDA9FA700038006 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F5CF43401FDA9FA700038006 /* .swiftlint.yml */; };
+		F5E92B8C2085FF5C00CE3AC3 /* LabelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E92B8B2085FF5C00CE3AC3 /* LabelType.swift */; };
+		F5E92B902086011A00CE3AC3 /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E92B8E2086011A00CE3AC3 /* StatisticsCell.swift */; };
+		F5E92B912086011A00CE3AC3 /* StatisticsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E92B8F2086011A00CE3AC3 /* StatisticsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +92,9 @@
 		F5C03E6C1FD6D9B80006484F /* coincidence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coincidence.wav; sourceTree = "<group>"; };
 		F5C2744C204809E5005415E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F5CF43401FDA9FA700038006 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		F5E92B8B2085FF5C00CE3AC3 /* LabelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelType.swift; sourceTree = "<group>"; };
+		F5E92B8E2086011A00CE3AC3 /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
+		F5E92B8F2086011A00CE3AC3 /* StatisticsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +227,7 @@
 		F5899EC31FBF17A900728630 /* statistics */ = {
 			isa = PBXGroup;
 			children = (
+				F5E92B8D208600FB00CE3AC3 /* cell */,
 				F5899EC81FBF18A000728630 /* StatisticsViewController.swift */,
 				F5899EC61FBF188B00728630 /* StatisticsViewController.storyboard */,
 			);
@@ -299,8 +306,18 @@
 			children = (
 				F5C2744C204809E5005415E1 /* Constants.swift */,
 				F5159A66207CD7CA00C705C1 /* ButtonTypes.swift */,
+				F5E92B8B2085FF5C00CE3AC3 /* LabelType.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		F5E92B8D208600FB00CE3AC3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F5E92B8E2086011A00CE3AC3 /* StatisticsCell.swift */,
+				F5E92B8F2086011A00CE3AC3 /* StatisticsCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +394,7 @@
 				F5899EDA1FBF198900728630 /* GameViewController.storyboard in Resources */,
 				F5B8AD421FBDD4A6007326E4 /* Assets.xcassets in Resources */,
 				F5899ED61FBF196A00728630 /* MainNavigationController.storyboard in Resources */,
+				F5E92B912086011A00CE3AC3 /* StatisticsCell.xib in Resources */,
 				F5CF43411FDA9FA700038006 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,9 +473,11 @@
 				F5159A6B207E013A00C705C1 /* CoreDataManager.swift in Sources */,
 				F5159A65207CD60E00C705C1 /* VZGameEngine.swift in Sources */,
 				F5C03E6B1FD6D85C0006484F /* SoundEngine.swift in Sources */,
+				F5E92B902086011A00CE3AC3 /* StatisticsCell.swift in Sources */,
 				F5899ED11FBF192A00728630 /* MenuViewController.swift in Sources */,
 				F5B8AD3B1FBDD4A6007326E4 /* AppDelegate.swift in Sources */,
 				F5899ECB1FBF18B800728630 /* WinViewController.swift in Sources */,
+				F5E92B8C2085FF5C00CE3AC3 /* LabelType.swift in Sources */,
 				F5159A6E207E075C00C705C1 /* VZGameResult.swift in Sources */,
 				F5159A5E207CD42D00C705C1 /* UICellExt.swift in Sources */,
 				F5159A5A207CCFE500C705C1 /* StatisticsModel.swift in Sources */,

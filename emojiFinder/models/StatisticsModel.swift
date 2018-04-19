@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import SwiftyBeaver
 
 class StatisticsModel {
     
@@ -27,11 +28,18 @@ class StatisticsModel {
     
     func setFilter(complexity: VZGameComplexity) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "GameResult")
-        let sortDescriptor = NSSortDescriptor(key: "complexity", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "time", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        let predicate = NSPredicate(format: "%K == %@", "complexity", complexity.rawValue)
+        let predicate = NSPredicate(format: "%K == %@", "complexity", String(complexity.intValue()))
         fetchRequest.predicate = predicate
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataManager.shared.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        do {
+            try self.fetchedResultsController!.performFetch()
+            self.didFetchResults?()
+        } catch {
+            SwiftyBeaver.error(error.localizedDescription)
+        }
+        
     }
     
     func numberOfResults() -> Int {
