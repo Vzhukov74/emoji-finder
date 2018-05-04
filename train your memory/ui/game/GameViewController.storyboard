@@ -9,24 +9,32 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PressStart2P.ttf">
+            <string>PressStart2P</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="3fb-KZ-wau">
             <objects>
-                <viewController storyboardIdentifier="GameViewController" id="QME-2Y-nUo" customClass="GameViewController" customModule="emojiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="QME-2Y-nUo" customClass="GameViewController" customModule="train_your_memory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZe-RH-73J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXZ-2E-T4A">
-                                <rect key="frame" x="24" y="22" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXZ-2E-T4A">
+                                <rect key="frame" x="16" y="22" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="6Dl-0j-UOP"/>
                                     <constraint firstAttribute="width" constant="46" id="yjU-zj-Gue"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="PressStart2P" family="Press Start 2P" pointSize="11"/>
                                 <color key="tintColor" red="0.92156862745098034" green="0.23921568627450979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="10" maxX="20" maxY="10"/>
-                                <state key="normal" image="close"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.92156862745098034" green="0.23921568627450979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-IH-Osy">
                                 <rect key="frame" x="8" y="72" width="359" height="595"/>
@@ -39,18 +47,21 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-vk-hBe">
-                                <rect key="frame" x="305" y="22" width="46" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-vk-hBe">
+                                <rect key="frame" x="303" y="22" width="56" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="3Ga-kH-0r0"/>
-                                    <constraint firstAttribute="width" constant="46" id="gDe-06-E0U"/>
+                                    <constraint firstAttribute="width" constant="56" id="gDe-06-E0U"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="PressStart2P" family="Press Start 2P" pointSize="11"/>
                                 <color key="tintColor" red="0.92156862745098034" green="0.23921568627450979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" image="pause"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.92156862745098034" green="0.23921568627450979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvK-t6-8Nv">
-                                <rect key="frame" x="80" y="45.5" width="215" height="0.0"/>
+                                <rect key="frame" x="82" y="45.5" width="211" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,11 +72,11 @@
                             <constraint firstItem="TvK-t6-8Nv" firstAttribute="centerY" secondItem="EXZ-2E-T4A" secondAttribute="centerY" id="34d-R3-2vi"/>
                             <constraint firstItem="1Bf-IH-Osy" firstAttribute="leading" secondItem="Bg6-Ae-tQA" secondAttribute="leading" constant="8" id="8D9-Js-kRl"/>
                             <constraint firstItem="EXZ-2E-T4A" firstAttribute="top" secondItem="Bg6-Ae-tQA" secondAttribute="top" constant="2" id="Fux-Vn-Zet"/>
-                            <constraint firstItem="Bg6-Ae-tQA" firstAttribute="trailing" secondItem="7N0-vk-hBe" secondAttribute="trailing" constant="24" id="ImI-oc-Vd7"/>
+                            <constraint firstItem="Bg6-Ae-tQA" firstAttribute="trailing" secondItem="7N0-vk-hBe" secondAttribute="trailing" constant="16" id="ImI-oc-Vd7"/>
                             <constraint firstItem="Bg6-Ae-tQA" firstAttribute="bottom" secondItem="1Bf-IH-Osy" secondAttribute="bottom" id="Jok-X4-Nyl"/>
-                            <constraint firstItem="EXZ-2E-T4A" firstAttribute="leading" secondItem="Bg6-Ae-tQA" secondAttribute="leading" constant="24" id="K9F-ag-w6A"/>
+                            <constraint firstItem="EXZ-2E-T4A" firstAttribute="leading" secondItem="Bg6-Ae-tQA" secondAttribute="leading" constant="16" id="K9F-ag-w6A"/>
                             <constraint firstItem="7N0-vk-hBe" firstAttribute="leading" secondItem="TvK-t6-8Nv" secondAttribute="trailing" constant="10" id="Uap-Zu-b4M"/>
-                            <constraint firstItem="TvK-t6-8Nv" firstAttribute="leading" secondItem="EXZ-2E-T4A" secondAttribute="trailing" constant="10" id="X8d-ff-vPU"/>
+                            <constraint firstItem="TvK-t6-8Nv" firstAttribute="centerX" secondItem="NZe-RH-73J" secondAttribute="centerX" id="WhW-Uu-bEF"/>
                             <constraint firstItem="1Bf-IH-Osy" firstAttribute="top" secondItem="EXZ-2E-T4A" secondAttribute="bottom" constant="4" id="l9i-O1-HQD"/>
                             <constraint firstItem="7N0-vk-hBe" firstAttribute="top" secondItem="Bg6-Ae-tQA" secondAttribute="top" constant="2" id="nAP-4B-5b2"/>
                             <constraint firstAttribute="trailing" secondItem="1Bf-IH-Osy" secondAttribute="trailing" constant="8" id="y40-3H-MK9"/>
@@ -84,8 +95,4 @@
             <point key="canvasLocation" x="-7.2000000000000002" y="69.715142428785612"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="close" width="23" height="23"/>
-        <image name="pause" width="43" height="80"/>
-    </resources>
 </document>

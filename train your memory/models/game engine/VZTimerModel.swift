@@ -28,10 +28,17 @@ class VZTimerFormatter {
 }
 
 class VZTimerModel {
+    
+    private enum State {
+        case suspended
+        case resumed
+    }
+    
     private let queue = DispatchQueue(label: "md.vz.timer")
     private var _timer: DispatchSourceTimer?
     private var _start: CFTimeInterval?
     private var _totalElapsed = CFTimeInterval(0)//CFTimeInterval?
+    private var _state: State = .suspended
     
     var updateTime: ((_ time: String?) -> Void)?
     var isTimerActive: Bool {
@@ -79,11 +86,22 @@ class VZTimerModel {
     }
     
     private func startTimer() {
+        if _state == .resumed {
+            return
+        }
+        _state = .resumed
+        
         _start = CACurrentMediaTime()
         _timer?.resume()
     }
     
     private func pauseTimer() {
+        
+        if _state == .suspended {
+            return
+        }
+        _state = .suspended
+        
         _timer?.suspend()
         _totalElapsed = _totalElapsed + (CACurrentMediaTime() - (_start ?? CFTimeInterval(0)))
         _start = nil
@@ -92,8 +110,12 @@ class VZTimerModel {
     deinit {
         _timer?.setEventHandler {}
         _timer?.cancel()
-        _timer?.resume()
-        
+        /*
+         If the timer is suspended, calling cancel without resuming
+         triggers a crash. This is documented here
+         https://forums.developer.apple.com/thread/15902
+         */
+        startTimer()
         updateTime = nil
         
         print("deinit - VZTimerModel")

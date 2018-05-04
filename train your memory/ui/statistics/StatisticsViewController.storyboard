@@ -9,11 +9,16 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PressStart2P.ttf">
+            <string>PressStart2P</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Statistics View Controller-->
         <scene sceneID="gPL-U7-37S">
             <objects>
-                <viewController storyboardIdentifier="StatisticsViewController" id="XBO-TP-1hV" customClass="StatisticsViewController" customModule="emojiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatisticsViewController" id="XBO-TP-1hV" customClass="StatisticsViewController" customModule="train_your_memory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTk-5c-DSL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,8 +73,11 @@
                                             <constraint firstAttribute="width" constant="46" id="D8A-FS-e2C"/>
                                             <constraint firstAttribute="height" constant="46" id="zAE-8E-efL"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="PressStart2P" family="Press Start 2P" pointSize="11"/>
                                         <color key="tintColor" red="0.9210833907" green="0.24043750759999999" blue="0.0001900948409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="close"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" red="0.92156862745098034" green="0.23921568627450979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,7 +131,4 @@
             <point key="canvasLocation" x="-180" y="169.56521739130437"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="close" width="23" height="23"/>
-    </resources>
 </document>

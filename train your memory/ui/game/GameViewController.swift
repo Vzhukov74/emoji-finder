@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var playButton: UIButton! {
         didSet {
-            playButton.setImage(Images.play, for: .normal)
+            playButton.setTitle("Play", for: .normal)
         }
     }
     @IBOutlet weak var timeLabel: UILabel! {
@@ -67,9 +67,9 @@ class GameViewController: UIViewController {
         
         model.updatePlayPauseButton = { [weak self] state in
             if state {
-                self?.playButton.setImage(Images.pause, for: .normal)
+                self?.playButton.setTitle("Pause", for: .normal)
             } else {
-                self?.playButton.setImage(Images.play, for: .normal)
+                self?.playButton.setTitle("Play", for: .normal)
             }
         }
         
@@ -98,7 +98,6 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = GameCell.cell(collectionView: collectionView, indexPath: indexPath)
         let cellModel = model.currentSet[indexPath.row]
         cell.configure(model: cellModel)
@@ -107,7 +106,7 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return model.cellSize
+        return CGSize(width: 50, height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

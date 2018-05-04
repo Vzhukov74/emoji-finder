@@ -29,9 +29,7 @@ class VZGameEngine {
     private var numberOfGuessedPairs: Int = 0
     private var timerModel: VZTimerModel!
     
-    var cellSize = CGSize(width: 60, height: 60)
     var currentSet = [VZGameCellModel]()
-    
     var numberOfMotion = 0
     
     var userWonAction: ((_ time: Int64, _ actions: Int32, _ complexity: VZGameComplexity) -> Void)?
