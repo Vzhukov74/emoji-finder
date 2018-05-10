@@ -30,6 +30,16 @@ class GameViewController: UIViewController {
         }
     }
     
+    private lazy var cellSize: CGSize = {
+        let screenWidth = UIScreen.main.bounds.width
+        let space = 5
+        
+        let width: CGFloat = (UIScreen.main.bounds.width - CGFloat(space * 6)) / 5
+        
+        let size = CGSize(width: width, height: width)
+        return size
+    }()
+    
     var model: VZGameEngine!
     
     override func viewDidLoad() {
@@ -106,7 +116,7 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 50, height: 50)
+        return cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
