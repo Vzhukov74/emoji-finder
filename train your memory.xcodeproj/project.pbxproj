@@ -20,6 +20,8 @@
 		F5159A71207E24FE00C705C1 /* PressStart2P.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5159A70207E24FD00C705C1 /* PressStart2P.ttf */; };
 		F52282171FC5873900DB1C1C /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52282151FC5873900DB1C1C /* GameCell.swift */; };
 		F52282181FC5873A00DB1C1C /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52282161FC5873900DB1C1C /* GameCell.xib */; };
+		F55DDE5520A5B9B900CB5667 /* click.aiff in Resources */ = {isa = PBXBuildFile; fileRef = F55DDE5320A5B9B800CB5667 /* click.aiff */; };
+		F55DDE5620A5B9B900CB5667 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = F55DDE5420A5B9B900CB5667 /* win.wav */; };
 		F569DCC22091D0AD0035A9AE /* WinNameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569DCC12091D0AD0035A9AE /* WinNameHelper.swift */; };
 		F569DCC42091F9520035A9AE /* VZGameSoundEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F569DCC32091F9520035A9AE /* VZGameSoundEngine.swift */; };
 		F5899EC51FBF17E600728630 /* StoryboardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5899EC41FBF17E600728630 /* StoryboardList.swift */; };
@@ -68,6 +70,8 @@
 		F5159A70207E24FD00C705C1 /* PressStart2P.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart2P.ttf; sourceTree = "<group>"; };
 		F52282151FC5873900DB1C1C /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		F52282161FC5873900DB1C1C /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
+		F55DDE5320A5B9B800CB5667 /* click.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = click.aiff; sourceTree = "<group>"; };
+		F55DDE5420A5B9B900CB5667 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		F569DCC12091D0AD0035A9AE /* WinNameHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinNameHelper.swift; sourceTree = "<group>"; };
 		F569DCC32091F9520035A9AE /* VZGameSoundEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VZGameSoundEngine.swift; sourceTree = "<group>"; };
 		F5899EC41FBF17E600728630 /* StoryboardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardList.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 				F5899EBE1FBF176800728630 /* ui */,
 				F5B8AD3A1FBDD4A6007326E4 /* AppDelegate.swift */,
 				F5C03E6C1FD6D9B80006484F /* coincidence.wav */,
+				F55DDE5320A5B9B800CB5667 /* click.aiff */,
+				F55DDE5420A5B9B900CB5667 /* win.wav */,
 				F5B8AD411FBDD4A6007326E4 /* Assets.xcassets */,
 				F5B8AD431FBDD4A6007326E4 /* LaunchScreen.storyboard */,
 				F5B8AD461FBDD4A6007326E4 /* Info.plist */,
@@ -389,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5159A71207E24FE00C705C1 /* PressStart2P.ttf in Resources */,
+				F55DDE5620A5B9B900CB5667 /* win.wav in Resources */,
 				F5990FFF2059331A004383D8 /* main.xcdatamodeld in Resources */,
 				F5C03E6D1FD6D9B90006484F /* coincidence.wav in Resources */,
 				F5899EDE1FBF19A800728630 /* MenuViewController.storyboard in Resources */,
@@ -397,6 +404,7 @@
 				F5899EDC1FBF199800728630 /* LoadingViewController.storyboard in Resources */,
 				F5B8AD451FBDD4A6007326E4 /* LaunchScreen.storyboard in Resources */,
 				F52282181FC5873A00DB1C1C /* GameCell.xib in Resources */,
+				F55DDE5520A5B9B900CB5667 /* click.aiff in Resources */,
 				F5899EDA1FBF198900728630 /* GameViewController.storyboard in Resources */,
 				F5B8AD421FBDD4A6007326E4 /* Assets.xcassets in Resources */,
 				F5899ED61FBF196A00728630 /* MainNavigationController.storyboard in Resources */,

@@ -11,6 +11,7 @@ enum LabelType {
     case menu
     case statisticsTitle
     case winInfo
+    case noDataInTable
     
     static let `default` = LabelType.menu
 }
@@ -41,6 +42,11 @@ extension UILabel {
             case .winInfo:
                 self.textColor = Colors.menuText
                 self.font = Fonts.pressStart2P_14
+            case .noDataInTable:
+                self.textColor = Colors.menuText
+                self.font = Fonts.pressStart2P_14
+                self.textAlignment = .center
+                self.numberOfLines = 0
             }
         }
     }

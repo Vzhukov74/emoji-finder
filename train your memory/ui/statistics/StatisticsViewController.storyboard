@@ -99,6 +99,12 @@
                                     <constraint firstAttribute="bottom" secondItem="alI-Hi-A8H" secondAttribute="bottom" constant="8" id="zyg-zs-5Dc"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bba-d8-YCg">
+                                <rect key="frame" x="20" y="140" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="30" estimatedRowHeight="30" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="46F-ir-Bma">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,9 +115,12 @@
                             <constraint firstItem="a6P-6r-I4J" firstAttribute="trailing" secondItem="xla-zh-9cp" secondAttribute="trailing" id="6mV-9U-0Js"/>
                             <constraint firstItem="a6P-6r-I4J" firstAttribute="leading" secondItem="xla-zh-9cp" secondAttribute="leading" id="GRQ-YM-vCb"/>
                             <constraint firstItem="46F-ir-Bma" firstAttribute="top" secondItem="a6P-6r-I4J" secondAttribute="bottom" id="KOf-LN-uLl"/>
+                            <constraint firstItem="Bba-d8-YCg" firstAttribute="top" secondItem="a6P-6r-I4J" secondAttribute="bottom" constant="40" id="Og4-pU-vky"/>
+                            <constraint firstItem="xla-zh-9cp" firstAttribute="trailing" secondItem="Bba-d8-YCg" secondAttribute="trailing" constant="20" id="Tge-qO-b2C"/>
                             <constraint firstItem="xla-zh-9cp" firstAttribute="trailing" secondItem="46F-ir-Bma" secondAttribute="trailing" id="WiR-bY-fYU"/>
                             <constraint firstItem="a6P-6r-I4J" firstAttribute="top" secondItem="xla-zh-9cp" secondAttribute="top" id="dH6-YK-MbO"/>
                             <constraint firstItem="46F-ir-Bma" firstAttribute="leading" secondItem="xla-zh-9cp" secondAttribute="leading" id="nQ6-fn-Nzn"/>
+                            <constraint firstItem="Bba-d8-YCg" firstAttribute="leading" secondItem="xla-zh-9cp" secondAttribute="leading" constant="20" id="oEp-KV-phI"/>
                             <constraint firstItem="xla-zh-9cp" firstAttribute="bottom" secondItem="46F-ir-Bma" secondAttribute="bottom" id="xLw-KN-QdN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xla-zh-9cp"/>
@@ -120,6 +129,7 @@
                         <outlet property="actionsLabel" destination="hdz-VO-ThL" id="REH-p7-odG"/>
                         <outlet property="closeButton" destination="9hx-ft-Uco" id="gU6-cZ-eMd"/>
                         <outlet property="nameLabel" destination="alI-Hi-A8H" id="s0k-u9-EGZ"/>
+                        <outlet property="noResultsLabel" destination="Bba-d8-YCg" id="lyH-Pw-hnL"/>
                         <outlet property="placeLabel" destination="vF1-ZF-U21" id="HUN-MJ-ok8"/>
                         <outlet property="segmentedControl" destination="eQM-vx-Fhi" id="obz-Ft-sXX"/>
                         <outlet property="tableView" destination="46F-ir-Bma" id="7Gi-fO-hw5"/>

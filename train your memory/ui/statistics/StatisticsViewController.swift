@@ -56,6 +56,13 @@ class StatisticsViewController: UIViewController {
     
     @IBOutlet weak var closeButton: UIButton!
     
+    @IBOutlet weak var noResultsLabel: UILabel! {
+        didSet {
+            noResultsLabel.type = .noDataInTable
+            noResultsLabel.text = "Oops!\nYou don't have results here!\nGo to play!"
+        }
+    }
+    
     var model: StatisticsModel!
     
     override func viewDidLoad() {
@@ -90,7 +97,10 @@ class StatisticsViewController: UIViewController {
 
 extension StatisticsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.numberOfResults()
+        let numberOfRowsInSection = model.numberOfResults()
+        noResultsLabel.isHidden = (numberOfRowsInSection != 0)
+        
+        return numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

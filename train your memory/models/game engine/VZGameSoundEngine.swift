@@ -43,42 +43,40 @@ class VZGameSoundEngine {
     private var player = AVAudioPlayer()
     
     private let userGuessed = NSURL(fileURLWithPath: Bundle.main.path(forResource: "coincidence", ofType: "wav")!) as URL
-    //private let userOpenCell = NSURL(fileURLWithPath: Bundle.main.path(forResource: "coincidence", ofType: "wav")!) as URL
-    //private let userWon = NSURL(fileURLWithPath: Bundle.main.path(forResource: "coincidence", ofType: "wav")!) as URL
+    private let userOpenCell = NSURL(fileURLWithPath: Bundle.main.path(forResource: "click", ofType: "aiff")!) as URL
+    private let userWon = NSURL(fileURLWithPath: Bundle.main.path(forResource: "win", ofType: "wav")!) as URL
     
     private let queue = DispatchQueue(label: "md.vz.audio")
     
     func playOpenCellSound() {
-        //play(melodyURL: self.userGuessedUrl)
+        play(melodyURL: self.userOpenCell)
     }
     
     func playCoincidenceSound() {
-        if !SoundConfig.isSoundOn() {
-            vibration()
-            return
-        }
-        
         play(melodyURL: self.userGuessed, isVibrationActice: true)
+        vibration()
     }
     
     func playPlayEndSound() {
-        //play(melodyURL: self.userGuessedUrl)
+        play(melodyURL: self.userWon)
     }
     
     private func play(melodyURL: URL, isVibrationActice: Bool = false) {
-        queue.async {
-            do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try AVAudioSession.sharedInstance().setActive(true)
-                
-                try self.player = AVAudioPlayer(contentsOf: melodyURL)
-                self.player.prepareToPlay()
-                self.player.play()
-                if isVibrationActice {
-                    self.vibration()
+        if !SoundConfig.isSoundOn() {
+            queue.async {
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                    try AVAudioSession.sharedInstance().setActive(true)
+                    
+                    try self.player = AVAudioPlayer(contentsOf: melodyURL)
+                    self.player.prepareToPlay()
+                    self.player.play()
+                    if isVibrationActice {
+                        self.vibration()
+                    }
+                } catch {
+                    SwiftyBeaver.error(error.localizedDescription)
                 }
-            } catch {
-                SwiftyBeaver.error(error.localizedDescription)
             }
         }
     }
