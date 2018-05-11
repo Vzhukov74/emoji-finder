@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9AB991185BED7B034EE4E71D /* Pods_emojiFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA27013C6B808D2B7B294CF3 /* Pods_emojiFinder.framework */; };
+		ABB0841F49595EF0CB80F814 /* Pods_train_your_memory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD9EEE014C9279FCF967EB1 /* Pods_train_your_memory.framework */; };
 		F5159A5A207CCFE500C705C1 /* StatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A59207CCFE500C705C1 /* StatisticsModel.swift */; };
 		F5159A5E207CD42D00C705C1 /* UICellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A5D207CD42D00C705C1 /* UICellExt.swift */; };
 		F5159A61207CD4C900C705C1 /* VZGameCellAdp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5159A60207CD4C900C705C1 /* VZGameCellAdp.swift */; };
@@ -55,9 +55,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C1A773F2B50C6E318315AFC /* Pods-emojiFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emojiFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder.debug.xcconfig"; sourceTree = "<group>"; };
-		92D9679DFF0A03D1211AF2AE /* Pods-emojiFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-emojiFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder.release.xcconfig"; sourceTree = "<group>"; };
-		BA27013C6B808D2B7B294CF3 /* Pods_emojiFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_emojiFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD9EEE014C9279FCF967EB1 /* Pods_train_your_memory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_train_your_memory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		776AB04DD3F5BC80E4E66E6B /* Pods-train your memory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-train your memory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-train your memory/Pods-train your memory.debug.xcconfig"; sourceTree = "<group>"; };
+		B1FA8BAE22314ACCDCB7F29E /* Pods-train your memory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-train your memory.release.xcconfig"; path = "Pods/Target Support Files/Pods-train your memory/Pods-train your memory.release.xcconfig"; sourceTree = "<group>"; };
 		F5159A59207CCFE500C705C1 /* StatisticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsModel.swift; sourceTree = "<group>"; };
 		F5159A5D207CD42D00C705C1 /* UICellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICellExt.swift; sourceTree = "<group>"; };
 		F5159A60207CD4C900C705C1 /* VZGameCellAdp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VZGameCellAdp.swift; sourceTree = "<group>"; };
@@ -111,18 +111,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5990FFE205932FB004383D8 /* CoreData.framework in Frameworks */,
-				9AB991185BED7B034EE4E71D /* Pods_emojiFinder.framework in Frameworks */,
+				ABB0841F49595EF0CB80F814 /* Pods_train_your_memory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C730AD1E60B24CDBBA6B3BB5 /* Pods */ = {
+		592CF7EF7C665DC9C25297F0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0C1A773F2B50C6E318315AFC /* Pods-emojiFinder.debug.xcconfig */,
-				92D9679DFF0A03D1211AF2AE /* Pods-emojiFinder.release.xcconfig */,
+				776AB04DD3F5BC80E4E66E6B /* Pods-train your memory.debug.xcconfig */,
+				B1FA8BAE22314ACCDCB7F29E /* Pods-train your memory.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				F5990FFD205932FA004383D8 /* CoreData.framework */,
-				BA27013C6B808D2B7B294CF3 /* Pods_emojiFinder.framework */,
+				4FD9EEE014C9279FCF967EB1 /* Pods_train_your_memory.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				F5B8AD391FBDD4A6007326E4 /* train your memory */,
 				F5B8AD381FBDD4A6007326E4 /* Products */,
 				C93015AF84E28CBAF9022F14 /* Frameworks */,
-				C730AD1E60B24CDBBA6B3BB5 /* Pods */,
+				592CF7EF7C665DC9C25297F0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -339,12 +339,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5B8AD491FBDD4A6007326E4 /* Build configuration list for PBXNativeTarget "train your memory" */;
 			buildPhases = (
-				88BB32354BE88326923789B6 /* [CP] Check Pods Manifest.lock */,
+				29A4D45AA9A2D355E552C88F /* [CP] Check Pods Manifest.lock */,
 				F5B8AD331FBDD4A6007326E4 /* Sources */,
 				F5B8AD341FBDD4A6007326E4 /* Frameworks */,
 				F5B8AD351FBDD4A6007326E4 /* Resources */,
-				00D74C9CD340FED7D9BB0352 /* [CP] Embed Pods Frameworks */,
-				732364557EA4237E34793455 /* [CP] Copy Pods Resources */,
+				F55DDE5720A5BF3400CB5667 /* SwiftLint */,
+				CA71A14C04B27F3E7142FFBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,40 +416,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00D74C9CD340FED7D9BB0352 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		732364557EA4237E34793455 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-emojiFinder/Pods-emojiFinder-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88BB32354BE88326923789B6 /* [CP] Check Pods Manifest.lock */ = {
+		29A4D45AA9A2D355E552C88F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -460,12 +427,44 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-emojiFinder-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-train your memory-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CA71A14C04B27F3E7142FFBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-train your memory/Pods-train your memory-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-train your memory/Pods-train your memory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F55DDE5720A5BF3400CB5667 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -631,7 +630,7 @@
 		};
 		F5B8AD4A1FBDD4A6007326E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C1A773F2B50C6E318315AFC /* Pods-emojiFinder.debug.xcconfig */;
+			baseConfigurationReference = 776AB04DD3F5BC80E4E66E6B /* Pods-train your memory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -647,7 +646,7 @@
 		};
 		F5B8AD4B1FBDD4A6007326E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92D9679DFF0A03D1211AF2AE /* Pods-emojiFinder.release.xcconfig */;
+			baseConfigurationReference = B1FA8BAE22314ACCDCB7F29E /* Pods-train your memory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -12,7 +12,7 @@ import Crashlytics
 import Fabric
 import CoreData
 
-fileprivate let log = SwiftyBeaver.self
+private let log = SwiftyBeaver.self
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

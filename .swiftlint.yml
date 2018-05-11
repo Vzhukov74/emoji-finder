@@ -1,4 +1,3 @@
-
 disabled_rules:
 - line_length
 - colon
@@ -15,12 +14,12 @@ excluded:
 - Pods
 
 included:
-- emojiFinder
-- emojiFinder/models
-- emojiFinder/ui/main
-- emojiFinder/ui/statistics
-- emojiFinder/ui/win
-- emojiFinder/game
-- emojiFinder/game/cells
-- emojiFinder/loading
-- emojiFinder/menu
+- train your memory
+- train your memory/models
+- train your memory/ui/main
+- train your memory/ui/statistics
+- train your memory/ui/win
+- train your memory/game
+- train your memory/game/cells
+- train your memory/loading
+- train your memory/menu

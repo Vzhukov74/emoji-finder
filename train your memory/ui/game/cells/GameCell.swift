@@ -23,7 +23,7 @@ class GameCell: UICollectionViewCell, CellRegistable, CellDequeueReusable, VZGam
         }
     }
     
-    //MARK: - implementation GameCellAdp protocol
+    // MARK: - implementation GameCellAdp protocol
     var _model: VZGameCellModel? {
         didSet {
             icon.image = UIImage(named: _model!._id)

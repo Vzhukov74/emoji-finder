@@ -100,7 +100,8 @@ class VZGameEngine {
             cell.unhideLogo()
             checkCells()
         } else {
-            if pusedCells.cellOne!.cellDataId() == cell.cellDataId() || pusedCells.cellTwo!.cellDataId() == cell.cellDataId()  {
+            if pusedCells.cellOne!.cellDataId() == cell.cellDataId() ||
+               pusedCells.cellTwo!.cellDataId() == cell.cellDataId() {
                 resetCells()
             } else {
                 resetCells()

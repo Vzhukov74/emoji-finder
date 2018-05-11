@@ -7,7 +7,6 @@
 //
 import UIKit
 
-
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var menuButton0: UIButton! {
