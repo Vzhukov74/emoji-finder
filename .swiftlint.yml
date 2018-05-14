@@ -15,11 +15,17 @@ excluded:
 
 included:
 - train your memory
+- train your memory/developer/extensions
+- train your memory/database
+- train your memory/common
 - train your memory/models
+- train your memory/models/game engine
+- train your memory/ui
 - train your memory/ui/main
 - train your memory/ui/statistics
+- train your memory/ui/statistics/cell
 - train your memory/ui/win
-- train your memory/game
-- train your memory/game/cells
-- train your memory/loading
-- train your memory/menu
+- train your memory/ui/game
+- train your memory/ui/game/cell
+- train your memory/ui/loading
+- train your memory/ui/menu
