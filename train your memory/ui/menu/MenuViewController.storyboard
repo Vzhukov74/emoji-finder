@@ -18,7 +18,7 @@
         <!--Menu View Controller-->
         <scene sceneID="Vej-hn-1C1">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="AO3-Sj-de9" customClass="MenuViewController" customModule="emojiFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="AO3-Sj-de9" customClass="MenuViewController" customModule="train_your_memory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dU0-YA-wEH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,8 +111,8 @@
                                 <color key="textColor" red="0.92156862750000001" green="0.23921568630000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="memory trainer " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0F-sZ-EqS">
-                                <rect key="frame" x="45" y="112" width="285" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brain trainer " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0F-sZ-EqS">
+                                <rect key="frame" x="55" y="112" width="266" height="19"/>
                                 <fontDescription key="fontDescription" name="PressStart2P" family="Press Start 2P" pointSize="19"/>
                                 <color key="textColor" red="0.92156862750000001" green="0.23921568630000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
